@@ -6,9 +6,9 @@ Public support and privacy pages for Horizon World Clock.
 
 World clocks that follow each city’s real sunrise and sunset. The sun in Horizon World Clock moves in sync with the sunrise and sunset times calculated for your selected city and local date. Each city’s latitude and longitude determine its daylight period, so the display changes with location and season.
 
-- Support: https://yom201.github.io/Horizon-World-Clock-support/
-- Privacy: https://yom201.github.io/Horizon-World-Clock-support/privacy.html
+- Support: https://support.ichitap.com/Horizon-World-Clock/
+- Privacy: https://support.ichitap.com/Horizon-World-Clock/privacy.html
 
-Static HTML/CSS, no analytics, no build dependencies. GitHub Pages serves `main` at `/`.
+Static HTML/CSS, no analytics, no build dependencies. GitHub Pages serves `main` at `/` with custom domain `support.ichitap.com`. Product pages are in `Horizon-World-Clock/`.
 
 © 2026 ICHITAP
