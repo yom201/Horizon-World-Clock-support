@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c15">
-  <meta name="description" content="遠くの街の時刻と、いまが昼か夜かをひと目で。日の出・日の入りに連動する、iPhoneの世界時計とホーム画面ウィジェット。">
+  <meta name="description" content="好きな街を、好きな数だけ。日の出・日の入りに連動するiPhoneの世界時計。ウィジェットを追加して、さまざまな都市の時刻と昼夜をひと目で。">
   <title>Horizon World Clock｜時刻と昼夜がわかる世界時計</title>
   <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
@@ -13,12 +13,12 @@
   <link rel="icon" type="image/webp" href="assets/icon.webp">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Horizon World Clock｜時刻と昼夜がわかる世界時計">
-  <meta property="og:description" content="遠くの街の時刻と、いまが昼か夜かをひと目で。日の出・日の入りに連動する、iPhoneの世界時計とホーム画面ウィジェット。">
+  <meta property="og:description" content="好きな街を、好きな数だけ。日の出・日の入りに連動するiPhoneの世界時計。ウィジェットを追加して、さまざまな都市の時刻と昼夜をひと目で。">
   <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/">
   <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=home-screen">
   <script src="clock.js" defer></script>
 </head>
 <body>
@@ -46,7 +46,7 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-line"></span>日の出・日の入りと世界時計</p>
           <h1 id="hero-title">遠くの街の、<br><em>いまの空。</em></h1>
-          <p class="hero-intro">東京の朝も、ニューヨークの夜も。<br class="wide-break">4つの街の時刻と昼夜を、ひと目で。</p>
+          <p class="hero-intro">好きな街を、好きな数だけ。<br class="wide-break">ウィジェットを追加して、世界の時刻と昼夜をひと目で。</p>
           <div class="actions">
             <a class="button button-primary" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで入手 <span aria-hidden="true">↗</span></a>
             <a class="button button-quiet" href="#daylight">昼夜のデモを見る <span aria-hidden="true">↓</span></a>
@@ -130,19 +130,15 @@
         <div class="device-stage">
           <div class="stage-glow" aria-hidden="true"></div>
           <figure class="phone">
-            <img src="assets/app-ja.webp" width="590" height="1283" alt="iPhoneアプリで4都市の時刻と昼夜を表示した画面" loading="lazy">
-          </figure>
-          <figure class="widget-shot" aria-label="ホーム画面ウィジェットの表示例">
-            <img src="assets/widget.webp" width="660" height="150" alt="" loading="lazy">
-            <figcaption><span>ロサンゼルス</span><span>ダラス</span><span>ロンドン</span><span>パリ</span></figcaption>
+            <img src="assets/iphone-home-widget.webp" width="810" height="1762" alt="iPhoneのホーム画面。上部にHorizon World Clockのウィジェットがあり、下に標準アプリのアイコンが並んでいる。" loading="lazy">
           </figure>
         </div>
         <div class="product-copy">
           <p class="eyebrow"><span class="eyebrow-line"></span>iPhoneアプリとウィジェット</p>
           <h2 id="widgets-title">気になる街を、<br>ホーム画面に。</h2>
-          <p>家族が暮らす街、次の旅先、仕事仲間のいる街。247の都市・地域から4つを選んで、現地の時刻と昼夜を並べられます。</p>
+          <p>家族が暮らす街、次の旅先、仕事仲間のいる街。247の都市・地域から好きな街を選び、ウィジェットを追加して、見たい街の時刻と昼夜をまとめて表示できます。</p>
           <dl class="product-details">
-            <div><dt><span aria-hidden="true">◫</span>ウィジェットごとに4都市</dt><dd>仕事用と家族用など、ウィジェットごとに異なる都市を選べます。</dd></div>
+            <div><dt><span aria-hidden="true">◫</span>街の組み合わせは自由</dt><dd>ウィジェット1つに4都市。仕事用や家族用など、ウィジェットごとに組み合わせを変えられます。</dd></div>
             <div><dt><span aria-hidden="true">☀</span>季節で変わる太陽の動き</dt><dd>日の出・日の入りは都市と日付ごとに計算。アプリのプレビューで、季節による違いを確かめられます。</dd></div>
           </dl>
         </div>
@@ -152,7 +148,12 @@
     <section class="download shell" id="download" aria-labelledby="download-title">
       <img src="assets/icon.webp" width="74" height="74" alt="" loading="lazy">
       <h2 id="download-title">世界の時刻と昼夜を、手元に。</h2>
-      <p>無料ダウンロード。開始から7日間は全機能を体験でき、体験後は買い切りで利用を続けられます。</p>
+      <p>無料ダウンロード。開始から7日間は全機能を体験できます。</p>
+      <p class="price-label">体験後は買い切り</p>
+      <dl class="pricing" aria-label="買い切り価格">
+        <div><dt>日本</dt><dd>¥290</dd></div>
+        <div><dt>米国</dt><dd>$2.90</dd></div>
+      </dl>
       <a class="button button-primary" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで入手 <span aria-hidden="true">↗</span></a>
       <small>iOS 17以降のiPhoneに対応</small>
     </section>
