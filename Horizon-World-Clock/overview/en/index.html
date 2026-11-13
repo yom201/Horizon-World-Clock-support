@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c15">
+  <meta name="description" content="See the local time and daylight in four cities at a glance. A world clock and iPhone Home Screen widget that follow each city’s sunrise and sunset.">
+  <title>Horizon World Clock — World time in a new light</title>
+  <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
+  <link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <link rel="icon" type="image/webp" href="../assets/icon.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Horizon World Clock — World time in a new light">
+  <meta property="og:description" content="See the local time and daylight in four cities at a glance. A world clock and iPhone Home Screen widget that follow each city’s sunrise and sunset.">
+  <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../clock.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a class="brand" href="./">
+        <img src="../assets/icon.webp" width="37" height="37" alt="">
+        <span>Horizon<span class="brand-secondary"> World Clock</span></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-demo" href="#daylight">Daylight demo</a>
+        <a class="language" lang="ja" hreflang="ja" href="../">日本語</a>
+        <a class="nav-store" href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">App Store <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-image" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="../assets/orbit-mobile.webp">
+        <img src="../assets/orbit.webp" alt="" fetchpriority="high">
+      </picture>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>Sunrise, sunset & world time</p>
+          <h1 id="hero-title">World time<br><em>in a new light.</em></h1>
+          <p class="hero-intro">See the local time and daylight in four cities at a glance, from the first light in Tokyo to nightfall in New York.</p>
+          <div class="actions">
+            <a class="button button-primary" href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">Download on the App Store <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#daylight">Explore the daylight demo <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="live-panel" aria-label="Current time in four cities">
+          <div class="live-heading"><span><i aria-hidden="true"></i>World time now</span><time id="live-utc">UTC</time></div>
+          <ul id="live-clocks" class="live-clocks"><li class="clock" data-city="la">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">Los Angeles</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="ny">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">New York</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="london">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">London</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="tokyo">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">Tokyo</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        </ul>
+          <noscript><p>Enable JavaScript to see the live clocks.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="daylight shell" id="daylight" aria-labelledby="daylight-title">
+      <div class="section-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span>Interactive demo</p>
+        <h2 id="daylight-title">One moment.<br>Four different skies.</h2>
+        <p>Move through the day to watch four cities change together. Pick another date to compare the hours of daylight across seasons.</p>
+      </div>
+      <div class="demo" id="demo">
+        <div class="demo-head">
+          <div class="demo-clock"><output for="scrub" id="utc-time" aria-live="off">12:00</output><span>UTC</span></div>
+          <label class="date-control"><span>Date (UTC)</span><input type="date" id="demo-date" min="2000-01-01" max="2099-12-31" disabled></label>
+        </div>
+        <div class="timeline-controls">
+          <button type="button" class="play" id="play" aria-label="Play" disabled><span aria-hidden="true">▶</span></button>
+          <div class="scrubber">
+            <input type="range" id="scrub" min="0" max="1439" step="1" value="720" aria-label="Demo time (UTC)" disabled>
+            <div class="ticks" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+          </div>
+        </div>
+        <div class="demo-legend"><span>Local time</span><span class="legend-day">Daylight hours</span><span>Sunrise / Sunset</span></div>
+        <ul class="demo-rows"><li class="demo-row" data-city="la">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>Los Angeles</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="ny">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>New York</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="london">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>London</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="tokyo">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>Tokyo</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        </ul>
+        <p class="demo-note">The bars show one UTC day. Sunrise and sunset are calculated for the displayed local date. The sun and moon show progress through day and night.</p>
+        <noscript><p class="demo-note">Enable JavaScript to use the demo.</p></noscript>
+      </div>
+    </section>
+
+    <section class="product" id="widgets" aria-labelledby="widgets-title">
+      <div class="shell product-inner">
+        <div class="device-stage">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <figure class="phone">
+            <img src="../assets/app-en.webp" width="590" height="1283" alt="The iPhone app showing four clocks with their local time and daylight" loading="lazy">
+          </figure>
+          <figure class="widget-shot" aria-label="Home Screen widget preview">
+            <img src="../assets/widget.webp" width="660" height="150" alt="" loading="lazy">
+            <figcaption><span>Los Angeles</span><span>Dallas</span><span>London</span><span>Paris</span></figcaption>
+          </figure>
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>iPhone app & widgets</p>
+          <h2 id="widgets-title">Your cities.<br>One glance.</h2>
+          <p>Keep family, teammates, and your next destination in view. Choose four places from 247 cities and regions and see their local time and daylight side by side.</p>
+          <dl class="product-details">
+            <div><dt><span aria-hidden="true">◫</span>Four cities per widget</dt><dd>Choose a different set for each Home Screen widget, such as one for work and one for family.</dd></div>
+            <div><dt><span aria-hidden="true">☀</span>Follow the changing seasons</dt><dd>Sunrise and sunset follow the city and date. Use the in-app motion preview to explore how the day changes with the seasons.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="download shell" id="download" aria-labelledby="download-title">
+      <img src="../assets/icon.webp" width="74" height="74" alt="" loading="lazy">
+      <h2 id="download-title">A little more of the world, at a glance.</h2>
+      <p>Free to download. Try every feature for 7 days after activation, then unlock the app with a one-time purchase.</p>
+      <a class="button button-primary" href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">Download on the App Store <span aria-hidden="true">↗</span></a>
+      <small>For iPhone with iOS 17 or later</small>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <small>© 2026 ICHITAP</small>
+      <nav aria-label="Footer">
+        <a href="../../#english">Support</a>
+        <a href="../../privacy.html#english">Privacy</a>
+        <a lang="ja" hreflang="ja" href="../">日本語</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

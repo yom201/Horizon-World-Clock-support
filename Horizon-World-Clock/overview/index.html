@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c15">
+  <meta name="description" content="遠くの街の時刻と、いまが昼か夜かをひと目で。日の出・日の入りに連動する、iPhoneの世界時計とホーム画面ウィジェット。">
+  <title>Horizon World Clock｜時刻と昼夜がわかる世界時計</title>
+  <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
+  <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
+  <link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
+  <link rel="icon" type="image/webp" href="assets/icon.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Horizon World Clock｜時刻と昼夜がわかる世界時計">
+  <meta property="og:description" content="遠くの街の時刻と、いまが昼か夜かをひと目で。日の出・日の入りに連動する、iPhoneの世界時計とホーム画面ウィジェット。">
+  <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/">
+  <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="clock.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a class="brand" href="./">
+        <img src="assets/icon.webp" width="37" height="37" alt="">
+        <span>Horizon<span class="brand-secondary"> World Clock</span></span>
+      </a>
+      <nav class="nav" aria-label="メインメニュー">
+        <a class="nav-demo" href="#daylight">昼夜のデモ</a>
+        <a class="language" lang="en" hreflang="en" href="en/">English</a>
+        <a class="nav-store" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Store <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-image" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="assets/orbit-mobile.webp">
+        <img src="assets/orbit.webp" alt="" fetchpriority="high">
+      </picture>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>日の出・日の入りと世界時計</p>
+          <h1 id="hero-title">遠くの街の、<br><em>いまの空。</em></h1>
+          <p class="hero-intro">東京の朝も、ニューヨークの夜も。<br class="wide-break">4つの街の時刻と昼夜を、ひと目で。</p>
+          <div class="actions">
+            <a class="button button-primary" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで入手 <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#daylight">昼夜のデモを見る <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="live-panel" aria-label="4都市の現在時刻">
+          <div class="live-heading"><span><i aria-hidden="true"></i>現在の世界時刻</span><time id="live-utc">UTC</time></div>
+          <ul id="live-clocks" class="live-clocks"><li class="clock" data-city="la">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">ロサンゼルス</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="ny">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">ニューヨーク</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="london">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">ロンドン</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        <li class="clock" data-city="tokyo">
+          <canvas width="216" height="216" aria-hidden="true"></canvas>
+          <span class="clock-city">東京</span>
+          <span class="clock-reading"><time>–:–</time><span aria-hidden="true">·</span><span class="clock-phase">—</span></span>
+        </li>
+        </ul>
+          <noscript><p>世界時刻の表示にはJavaScriptが必要です。</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="daylight shell" id="daylight" aria-labelledby="daylight-title">
+      <div class="section-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span>インタラクティブデモ</p>
+        <h2 id="daylight-title">同じ瞬間、<br>それぞれの空。</h2>
+        <p>スライダーで時刻を動かすと、4都市の時計と空が一緒に変わります。日付を変えて、季節ごとの昼の長さも比べられます。</p>
+      </div>
+      <div class="demo" id="demo">
+        <div class="demo-head">
+          <div class="demo-clock"><output for="scrub" id="utc-time" aria-live="off">12:00</output><span>UTC</span></div>
+          <label class="date-control"><span>日付（UTC）</span><input type="date" id="demo-date" min="2000-01-01" max="2099-12-31" disabled></label>
+        </div>
+        <div class="timeline-controls">
+          <button type="button" class="play" id="play" aria-label="再生" disabled><span aria-hidden="true">▶</span></button>
+          <div class="scrubber">
+            <input type="range" id="scrub" min="0" max="1439" step="1" value="720" aria-label="デモの時刻（UTC）" disabled>
+            <div class="ticks" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+          </div>
+        </div>
+        <div class="demo-legend"><span>現地時刻</span><span class="legend-day">昼の時間帯</span><span>日の出 / 日の入り</span></div>
+        <ul class="demo-rows"><li class="demo-row" data-city="la">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>ロサンゼルス</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="ny">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>ニューヨーク</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="london">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>ロンドン</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        <li class="demo-row" data-city="tokyo">
+          <div class="demo-place"><canvas width="144" height="144" aria-hidden="true"></canvas><div><strong>東京</strong><time>–:–</time></div></div>
+          <div class="demo-track" aria-hidden="true"></div>
+          <div class="demo-solar"><span class="sunrise">—</span><span class="sunset">—</span></div>
+        </li>
+        </ul>
+        <p class="demo-note">帯はUTCの1日、日の出・日の入りは表示中の現地日付の計算値です。太陽と月は昼と夜の進み具合を示します。</p>
+        <noscript><p class="demo-note">デモの操作にはJavaScriptが必要です。</p></noscript>
+      </div>
+    </section>
+
+    <section class="product" id="widgets" aria-labelledby="widgets-title">
+      <div class="shell product-inner">
+        <div class="device-stage">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <figure class="phone">
+            <img src="assets/app-ja.webp" width="590" height="1283" alt="iPhoneアプリで4都市の時刻と昼夜を表示した画面" loading="lazy">
+          </figure>
+          <figure class="widget-shot" aria-label="ホーム画面ウィジェットの表示例">
+            <img src="assets/widget.webp" width="660" height="150" alt="" loading="lazy">
+            <figcaption><span>ロサンゼルス</span><span>ダラス</span><span>ロンドン</span><span>パリ</span></figcaption>
+          </figure>
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>iPhoneアプリとウィジェット</p>
+          <h2 id="widgets-title">気になる街を、<br>ホーム画面に。</h2>
+          <p>家族が暮らす街、次の旅先、仕事仲間のいる街。247の都市・地域から4つを選んで、現地の時刻と昼夜を並べられます。</p>
+          <dl class="product-details">
+            <div><dt><span aria-hidden="true">◫</span>ウィジェットごとに4都市</dt><dd>仕事用と家族用など、ウィジェットごとに異なる都市を選べます。</dd></div>
+            <div><dt><span aria-hidden="true">☀</span>季節で変わる太陽の動き</dt><dd>日の出・日の入りは都市と日付ごとに計算。アプリのプレビューで、季節による違いを確かめられます。</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="download shell" id="download" aria-labelledby="download-title">
+      <img src="assets/icon.webp" width="74" height="74" alt="" loading="lazy">
+      <h2 id="download-title">世界の時刻と昼夜を、手元に。</h2>
+      <p>無料ダウンロード。開始から7日間は全機能を体験でき、体験後は買い切りで利用を続けられます。</p>
+      <a class="button button-primary" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで入手 <span aria-hidden="true">↗</span></a>
+      <small>iOS 17以降のiPhoneに対応</small>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <small>© 2026 ICHITAP</small>
+      <nav aria-label="フッター">
+        <a href="../">サポート</a>
+        <a href="../privacy.html">プライバシー</a>
+        <a lang="en" hreflang="en" href="en/">English</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
