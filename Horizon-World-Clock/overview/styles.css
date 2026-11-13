@@ -140,7 +140,9 @@ h1, h2 { line-height: 1.06; letter-spacing: -.064em; font-weight: 600; }
 .download { display: flex; flex-direction: column; align-items: center; text-align: center; padding-block: 104px; }
 .download img { border-radius: 18px; margin-bottom: 26px; box-shadow: 0 0 52px #3a66af55; }
 .download h2 { font-size: clamp(2.25rem, 5vw, 4.4rem); max-width: 780px; }
-:lang(ja) .download h2 { font-size: clamp(2rem, 4.65vw, 4.1rem); }
+:lang(ja) .download h2 { max-width: 950px; font-size: clamp(1.65rem, 4.65vw, 4.1rem); }
+:lang(ja) .download h2 span { display: inline-block; max-width: 100%; }
+:lang(ja) .download h2 span:last-child { white-space: nowrap; }
 .download .price-label { margin-top: 28px; font-size: .82rem; font-weight: 650; color: var(--blue); }
 .pricing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 300px); margin-top: 10px; border: 1px solid #899fc344; border-radius: 11px; background: #0f1929; }
 .pricing > div { display: flex; flex-direction: column; padding: 11px 9px 10px; }
