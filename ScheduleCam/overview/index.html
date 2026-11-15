@@ -65,14 +65,10 @@
         <p>Open ScheduleCam, aim the camera, and tap <strong>Schedule capture</strong>. If Android asks for camera, alarm, or notification permissions, allow them and tap <strong>Schedule capture</strong> again. Once the next capture appears, you can lock the device.</p>
         <a class="screen-off-link" href="#timing">What affects capture timing? <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="locked-example">
-        <p class="locked-label">Example · a scheduled morning photo</p>
-        <ol class="locked-timeline" role="list">
-          <li><time datetime="07:55">07:55</time><div><strong>Schedule started</strong><p>The next photo is set for 08:00.</p></div></li>
-          <li><time datetime="07:56">07:56</time><div><strong>Screen off</strong><p>Lock the phone and leave it aimed at the scene.</p></div></li>
-          <li><time datetime="08:00">08:00</time><div><strong>Photo saved</strong><p>ScheduleCam takes the photo while the display is off.</p></div></li>
-        </ol>
-      </div>
+      <figure class="locked-example screen-figure">
+        <img src="./assets/waiting-screen.webp" width="660" height="622" alt="ScheduleCam showing the next capture time for an active photo schedule" loading="lazy">
+        <figcaption>When <strong>Next capture</strong> appears, the schedule is ready.</figcaption>
+      </figure>
     </section>
 
     <section class="remote-shutter wrap" id="remote-shutter" aria-labelledby="remote-shutter-title">
@@ -86,12 +82,14 @@
         <p>Example · checking on a finished print</p>
         <div class="remote-shutter-devices">
           <div class="remote-shutter-device from-browser">
+            <span class="remote-device-icon remote-browser-icon" aria-hidden="true"></span>
             <span>Another device’s browser</span>
             <strong>Capture now</strong>
             <p>Send the request when a colleague says the print is done.</p>
           </div>
           <span class="remote-shutter-arrow" aria-hidden="true">→</span>
           <div class="remote-shutter-device">
+            <span class="remote-device-icon remote-phone-icon" aria-hidden="true"></span>
             <span>Android at the print lab</span>
             <strong>Remote standby</strong>
             <p>The phone takes the shot using the settings you selected.</p>
@@ -170,7 +168,7 @@
                     <div class="demo-card">
                       <label class="demo-row demo-row-stacked"><span>Start</span><input name="start" type="datetime-local"></label>
                       <label class="demo-row demo-row-stacked"><span>End</span><input name="end" type="datetime-local"></label>
-                      <label class="demo-row"><span>Interval (minutes)</span><input name="interval" type="number" min="1" step="1" value="15"></label>
+                      <label class="demo-row"><span>Interval (minutes)</span><input name="interval" type="number" min="1" step="1" value="10"></label>
                     </div>
                   </fieldset>
                   <fieldset class="demo-fieldset" id="demo-once" hidden>
@@ -232,6 +230,14 @@
         <p class="eyebrow"><span class="indicator"></span> Automatic uploads</p>
         <h2 id="drive-title">Save to<br>Google Drive.</h2>
         <p>Connect your Google Account to upload new photos and videos automatically. Open the ScheduleCam folder on any device signed in to the same account.</p>
+        <figure class="drive-result">
+          <div class="drive-result-file">
+            <img src="./assets/strawberry-growth.webp" width="960" height="640" alt="" loading="lazy">
+            <div><strong>ScheduleCam folder</strong><span>Photo in Google Drive</span></div>
+            <span class="drive-result-check" aria-hidden="true">✓</span>
+          </div>
+          <figcaption>Example of an uploaded capture</figcaption>
+        </figure>
       </div>
       <div class="drive-choices">
         <article class="drive-choice drive-only">
@@ -257,23 +263,22 @@
         </div>
       </div>
       <figure class="resolution-example">
-        <figcaption>Pixel count in one example</figcaption>
+        <figcaption>Example pixel counts</figcaption>
         <dl class="resolution-values">
           <div>
-            <dt>ScheduleCam still · AQUOS wish5</dt>
-            <dd><div class="resolution-meta"><strong>8.0 MP</strong><span>2,448 × 3,264</span></div>
+            <dt>Phone still photo</dt>
+            <dd><div class="resolution-meta"><strong>8.0 MP</strong><span>3,264 × 2,448</span></div>
               <div class="resolution-bar phone-still" aria-hidden="true"><span></span></div>
             </dd>
           </div>
           <div>
-            <dt>Tapo C210 network camera video</dt>
-            <dd><div class="resolution-meta"><strong>3.0 MP</strong><span>2,304 × 1,296</span></div>
+            <dt>1080p network camera video frame</dt>
+            <dd><div class="resolution-meta"><strong>2.1 MP</strong><span>1,920 × 1,080</span></div>
               <div class="resolution-bar network-video" aria-hidden="true"><span></span></div>
             </dd>
           </div>
         </dl>
-        <p>The tested phone still contains about <strong>2.7× as many pixels</strong> as a frame at the C210’s listed video resolution. Image quality also depends on the camera, lens, light, and settings.</p>
-        <a href="https://www.tp-link.com/us/home-networking/cloud-camera/tapo-c210/v1/">Tapo C210 specifications</a>
+        <p>An 8 MP photo has about <strong>3.9× as many pixels</strong> as a 1080p video frame. Available resolutions and image quality vary with the camera, lens, light, and settings.</p>
       </figure>
     </section>
 
@@ -358,7 +363,7 @@
             <div class="case-feature-copy">
               <p class="mode">Repeating photos</p>
               <h4>Review a long 3D print from another site</h4>
-              <p>Leave a phone aimed at the printer in a shared lab before heading to another location. Capture a frame every 15 minutes and open the sequence in Drive to see which layers took shape.</p>
+              <p>Leave a phone aimed at the printer in a shared lab before heading to another location. Set a recurring photo schedule and review the sequence in Drive to see which layers took shape.</p>
             </div>
           </article>
           <div class="case-grid">
@@ -386,11 +391,15 @@
       <div>
         <p class="eyebrow"><span class="indicator"></span> Before you set up</p>
         <h2 id="faq-title">Common questions</h2>
+        <figure class="screen-figure faq-figure">
+          <img src="./assets/schedule-notification.webp" width="668" height="383" alt="ScheduleCam’s Android notification with a Stop action" loading="lazy">
+          <figcaption>You can stop an active schedule from its notification.</figcaption>
+        </figure>
       </div>
       <div class="faq-list">
         <details id="timing" open>
-          <summary>What interval should I use with the screen off?</summary>
-          <p>Start with 15 minutes or longer for repeating captures. When Android enters a power-saving or idle mode, ScheduleCam adjusts shorter repeating intervals to at least 15 minutes. Android can delay or skip a capture, depending on the device and its power settings.</p>
+          <summary>How short can I set the photo interval?</summary>
+          <p>The repeating photo schedule accepts whole minutes, starting at 1 minute. The initial setting is 10 minutes. When Battery Saver or Doze is active, ScheduleCam raises intervals below 15 minutes to 15 minutes. Timing can vary with the device and its power settings.</p>
         </details>
         <details>
           <summary>How do I schedule video with sound?</summary>
@@ -424,10 +433,16 @@
           <li>English</li><li lang="ja">日本語</li><li lang="ko">한국어</li><li lang="zh-Hant">繁體中文</li><li lang="de">Deutsch</li><li lang="pt-BR">Português (Brasil)</li><li lang="es">Español</li>
         </ul>
       </div>
-      <div class="store">
-        <div class="store-label"><span class="play-icon" aria-hidden="true"></span><div><strong>Google Play</strong><p>The public listing is currently unavailable.</p></div></div>
-        <p class="ios-note">ScheduleCam has no planned iOS release. iOS prevents apps from starting scheduled camera captures in the background while the screen is off or the device is locked.</p>
-        <a class="source-link" href="https://developer.apple.com/documentation/avfoundation/avcapturesession/interruptionreason/videodevicenotavailableinbackground">Apple’s camera documentation <span aria-hidden="true">↗</span></a>
+      <div class="availability-options">
+        <figure class="screen-figure availability-figure">
+          <img src="./assets/language-picker.webp" width="472" height="655" alt="ScheduleCam’s language picker showing the device-language option and seven supported languages" loading="lazy">
+          <figcaption>Choose an app language or follow the device’s language.</figcaption>
+        </figure>
+        <div class="store">
+          <div class="store-label"><span class="play-icon" aria-hidden="true"></span><div><strong>Google Play</strong><p>The public listing is currently unavailable.</p></div></div>
+          <p class="ios-note">ScheduleCam has no planned iOS release. iOS prevents apps from starting scheduled camera captures in the background while the screen is off or the device is locked.</p>
+          <a class="source-link" href="https://developer.apple.com/documentation/avfoundation/avcapturesession/interruptionreason/videodevicenotavailableinbackground">Apple’s camera documentation <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   </main>
