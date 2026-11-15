@@ -8,13 +8,15 @@
   <meta name="description" content="Schedule your Android phone to take photos and videos while you’re away. Review the results from another device with Google Drive.">
   <link rel="canonical" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="stylesheet" href="./site.css">
+  <link rel="stylesheet" href="./demo.css">
+  <script src="./demo.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="brand" href="./"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
     <nav aria-label="Main navigation">
-      <a href="#how">How it works</a>
+      <a href="#try-demo">Try the app</a>
       <a href="#ideas">Use cases</a>
       <a class="nav-cta" href="#availability">Availability <span aria-hidden="true">↗</span></a>
     </nav>
@@ -26,7 +28,7 @@
         <h1 id="title">Capture it while<br>you’re away.</h1>
         <p>Set up an Android phone where you want to record. Schedule photos or videos before you leave, then review the results from another device with Google Drive.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#how">See how it works <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#try-demo">Try the app <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="#ideas">Explore use cases <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -51,13 +53,118 @@
         </ol>
         <p class="hint">For repeated captures with the screen off, start with intervals of 15 minutes or longer. Android power management may delay or skip captures.</p>
       </div>
-      <figure class="product">
+      <figure class="product" id="try-demo" tabindex="-1">
         <div class="product-background">
-          <div class="phone">
+          <div class="phone" id="schedule-demo-fallback">
             <img src="./assets/schedule.webp" width="540" height="1105" alt="ScheduleCam on Android, showing photo and video options and the capture schedule" loading="lazy">
           </div>
+          <div class="demo-phone" id="schedule-demo" hidden>
+            <div class="demo-screen">
+              <header class="demo-header">
+                <strong>ScheduleCam</strong>
+                <button type="button" class="demo-reset" id="demo-reset">Reset</button>
+              </header>
+              <div class="demo-tab">Schedule preview</div>
+              <form class="demo-form" id="demo-form" aria-label="ScheduleCam browser demo" novalidate>
+                <div class="demo-options" id="demo-draft">
+                  <fieldset class="demo-fieldset">
+                    <legend>Schedule type</legend>
+                    <div class="demo-segments">
+                      <label><input type="radio" name="mode" value="once"><span>One-time</span></label>
+                      <label><input type="radio" name="mode" value="repeat" checked><span>Repeat</span></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset">
+                    <legend>Capture type</legend>
+                    <div class="demo-segments">
+                      <label><input type="radio" name="kind" value="photo" checked><span>Photo</span></label>
+                      <label><input type="radio" name="kind" value="video"><span>Video</span></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset demo-video" id="demo-video" hidden>
+                    <legend class="demo-sr-only">Video settings</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>Video length</span>
+                        <select name="duration">
+                          <option value="1">1 min</option>
+                          <option value="2">2 min</option>
+                          <option value="3">3 min</option>
+                          <option value="4">4 min</option>
+                          <option value="5">5 min</option>
+                          <option value="6">6 min</option>
+                          <option value="7">7 min</option>
+                          <option value="8">8 min</option>
+                          <option value="9">9 min</option>
+                          <option value="10">10 min</option>
+                        </select>
+                      </label>
+                      <label class="demo-row"><span>Video audio</span>
+                        <select name="audio">
+                          <option value="off">Without audio</option>
+                          <option value="on">With audio</option>
+                        </select>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset" id="demo-repeat">
+                    <legend>Capture times</legend>
+                    <div class="demo-card">
+                      <label class="demo-row demo-row-stacked"><span>Start</span><input name="start" type="datetime-local"></label>
+                      <label class="demo-row demo-row-stacked"><span>End</span><input name="end" type="datetime-local"></label>
+                      <label class="demo-row"><span>Interval (minutes)</span><input name="interval" type="number" min="1" step="1" value="15"></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset" id="demo-once" hidden>
+                    <legend>Capture times</legend>
+                    <div class="demo-card" id="demo-times"></div>
+                    <button class="demo-add" id="demo-add" type="button">Add time</button>
+                  </fieldset>
+                  <template id="demo-time-row">
+                    <div class="demo-one-time">
+                      <div class="demo-time-heading">
+                        <label></label><button type="button" class="demo-remove">Remove</button>
+                      </div>
+                      <input type="datetime-local">
+                    </div>
+                  </template>
+                  <fieldset class="demo-fieldset">
+                    <legend>Camera settings</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>Camera</span>
+                        <select name="lens"><option value="rear">Rear · Standard</option><option value="front">Front</option></select>
+                      </label>
+                      <label class="demo-row"><span>Zoom</span><select name="zoom"></select></label>
+                      <label class="demo-row"><span>Resolution</span><select name="resolution"></select></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset">
+                    <legend>Save destination</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>Save to</span>
+                        <select name="destination">
+                          <option>Device</option>
+                          <option>Device and Drive</option>
+                          <option>Drive only</option>
+                        </select>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <section class="demo-status" id="demo-status" aria-labelledby="demo-next" hidden>
+                  <h3 id="demo-next" tabindex="-1">Next capture</h3>
+                  <p class="demo-next-time" id="demo-next-time"></p>
+                  <dl class="demo-summary" id="demo-summary"></dl>
+                </section>
+                <div class="demo-actions">
+                  <p id="demo-message" class="demo-message" role="status"></p>
+                  <button class="demo-submit" id="demo-submit" type="submit">Schedule capture</button>
+                  <button class="demo-stop" id="demo-stop" type="button" hidden>Stop schedule</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <figcaption>ScheduleCam’s Android scheduling screen</figcaption>
+        <figcaption id="demo-caption">ScheduleCam’s Android scheduling screen</figcaption>
       </figure>
     </section>
 
