@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8faf8">
   <title>ScheduleCam · Scheduled photos and videos for Android</title>
-  <meta name="description" content="Schedule your Android phone to take photos and videos while you’re away. Review the results from another device with Google Drive.">
+  <meta name="description" content="Schedule automatic photos and videos on Android. Upload captures to Google Drive and choose Drive only to free up space on your phone.">
   <link rel="canonical" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="stylesheet" href="./site.css">
   <link rel="stylesheet" href="./demo.css">
@@ -17,6 +17,7 @@
     <a class="brand" href="./"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
     <nav aria-label="Main navigation">
       <a href="#try-demo">Try the app</a>
+      <a href="#drive">Google Drive</a>
       <a href="#ideas">Use cases</a>
       <a class="nav-cta" href="#availability">Availability <span aria-hidden="true">↗</span></a>
     </nav>
@@ -24,20 +25,26 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="indicator"></span> Scheduled camera for Android</p>
-        <h1 id="title">Capture it while<br>you’re away.</h1>
-        <p>Set up an Android phone where you want to record. Schedule photos or videos before you leave, then review the results from another device with Google Drive.</p>
+        <p class="eyebrow"><span class="indicator"></span> Photos and video on Android</p>
+        <h1 id="title">Schedule your<br>camera.</h1>
+        <p>Set a time or interval for automatic photos and videos while you’re away. Connect Google Drive and choose <strong>Drive only</strong> to save space on your phone.</p>
         <div class="hero-actions">
           <a class="button primary" href="#try-demo">Try the app <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="#ideas">Explore use cases <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#drive">Drive options <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <figure class="hero-image">
-        <img src="./assets/basil.webp" width="1120" height="1400" alt="A young basil plant in morning light on a windowsill" fetchpriority="high">
-        <figcaption class="sample-card">
-          <span class="camera-icon" aria-hidden="true"></span>
-          <span>Example schedule<strong>Photo at 08:00</strong></span>
-          <span class="sample-status"><span class="indicator"></span>Daily</span>
+        <img src="./assets/scheduled-capture.webp" width="1120" height="1400" alt="An Android phone on a tripod with its rear camera facing a plant by a sunlit window" fetchpriority="high">
+        <figcaption class="capture-plan">
+          <div class="capture-plan-heading">
+            <span class="capture-clock" aria-hidden="true"></span>
+            <span><strong>Automatic photos</strong><small>Example · every 30 minutes</small></span>
+          </div>
+          <ul class="capture-slots" aria-label="Example capture times">
+            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="08:00">08:00</time></li>
+            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="08:30">08:30</time></li>
+            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="09:00">09:00</time></li>
+          </ul>
         </figcaption>
       </figure>
     </section>
@@ -49,7 +56,7 @@
         <ol class="steps" role="list">
           <li><span class="step-number" aria-hidden="true">1</span><h3>Pick a time or an interval</h3><p>Add up to 30 one-time capture times, or choose a start, an end, and an interval for a repeating schedule.</p></li>
           <li><span class="step-number" aria-hidden="true">2</span><h3>Choose photo or video</h3><p>Set your camera and tap Schedule capture. With the required permissions, the camera can take photos or record 1–10 minute clips while the screen is off or locked.</p></li>
-          <li><span class="step-number" aria-hidden="true">3</span><h3>Open captures wherever you are</h3><p>Review them on your phone, or connect Google Drive to upload new captures automatically. Open the ScheduleCam folder from another device using the same Google Account.</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>Open captures wherever you are</h3><p>Review them on your phone or open them from another device with <a href="#drive">Google Drive</a>.</p></li>
         </ol>
         <p class="hint">For repeated captures with the screen off, start with intervals of 15 minutes or longer. Android power management may delay or skip captures.</p>
       </div>
@@ -168,6 +175,25 @@
       </figure>
     </section>
 
+    <section class="drive-section wrap" id="drive" aria-labelledby="drive-title">
+      <div class="drive-intro">
+        <p class="eyebrow"><span class="indicator"></span> Automatic uploads</p>
+        <h2 id="drive-title">Save to<br>Google Drive.</h2>
+        <p>Connect your Google Account to upload new photos and videos automatically. Open the ScheduleCam folder on any device signed in to the same account.</p>
+      </div>
+      <div class="drive-choices">
+        <article class="drive-choice drive-only">
+          <span class="drive-icon" aria-hidden="true">↑</span>
+          <div><h3>Drive only</h3><p>Free up space on your phone. ScheduleCam removes the phone’s copy after verifying each upload.</p></div>
+        </article>
+        <article class="drive-choice">
+          <span class="drive-icon" aria-hidden="true">+</span>
+          <div><h3>Device and Drive</h3><p>Keep your captures on your phone as well as in Google Drive.</p></div>
+        </article>
+        <p class="drive-note">While an upload is pending, ScheduleCam keeps a temporary copy on your phone so it can retry.</p>
+      </div>
+    </section>
+
     <section class="ideas" id="ideas" aria-labelledby="ideas-title">
       <div class="wrap">
         <p class="eyebrow"><span class="indicator"></span> Use cases</p>
@@ -226,8 +252,8 @@
   <footer class="site-footer wrap">
     <a class="brand" href="./"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
     <nav aria-label="Legal and support">
-      <a href="https://ichitap-schedulecam.web.app/privacy/" hreflang="ja">Privacy policy <span lang="en">(Japanese)</span></a>
-      <a href="mailto:ichitap-support@googlegroups.com">Contact support</a>
+      <a href="https://ichitap-schedulecam.web.app/privacy/">Privacy Policy</a>
+      <a href="https://ichitap-schedulecam.web.app/privacy/#contact">Contact support</a>
     </nav>
   </footer>
 </body>
