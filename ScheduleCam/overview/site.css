@@ -84,6 +84,7 @@ p { margin: 0; }
 .locked-example figcaption { color: #d0e0ed; }
 .remote-shutter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 6vw, 92px); margin-top: 72px; }
 .remote-shutter-copy > p:not(.eyebrow) { margin-top: 15px; max-width: 46ch; color: var(--muted); line-height: 1.58; }
+.remote-shutter-cta { margin-top: 22px; }
 .remote-shutter-flow { min-width: 0; margin: 0; padding: clamp(18px, 3.5vw, 33px); border: 1px solid #d6e4db; border-radius: 16px; background: #edf5ef; container-type: inline-size; }
 .remote-shutter-flow > p { color: #21593e; font-size: .81rem; font-weight: 700; }
 .remote-shutter-devices { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 9px; margin-block: 14px; align-items: stretch; }
