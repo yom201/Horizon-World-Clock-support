@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How ScheduleCam handles captures, Google Account data, and remote capture requests.">
+  <title>ScheduleCam Privacy Policy</title>
+  <link rel="canonical" href="https://support.ichitap.com/ScheduleCam/privacy/">
+  <link rel="stylesheet" href="../overview/site.css">
+  <style>
+    main { max-width: 760px; width: calc(100% - 36px); margin: 0 auto; padding: 36px 0 60px; }
+    main header, main section, main footer { padding: 24px 0; }
+    main section, main footer { border-top: 1px solid var(--line); }
+    main h1 { margin: 28px 0 12px; }
+    main h2 { font-size: clamp(1.45rem, 3vw, 2rem); letter-spacing: -.035em; }
+    main p { margin-top: 12px; line-height: 1.7; color: var(--muted); }
+    .updated { font-size: .875rem; }
+    main a:not(.brand) { color: var(--green); text-underline-offset: 3px; }
+    main footer a { display: inline-block; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <a class="brand" href="../overview/">ScheduleCam</a>
+      <h1>Privacy Policy</h1>
+      <p class="updated"><time datetime="2026-11-15">November 15, 2026</time></p>
+      <p>ScheduleCam is an Android app by ICHITAP that schedules captures and can save them to the Google Drive account you connect. This policy explains how the app handles captures, information from Google, and remote capture requests.</p>
+    </header>
+    <section>
+      <h2>Captures and device storage</h2>
+      <p>When you schedule a capture or enable remote capture, ScheduleCam can use the camera while the device is locked. If you select video with audio, it also uses the microphone. The app stores captures, schedule settings, capture results, and error records on the device. You can delete photos and videos from the <strong>Captures</strong> screen.</p>
+    </section>
+    <section>
+      <h2>Google Account and Drive</h2>
+      <p>When you sign in with Google, ScheduleCam uses the email address and authentication information provided by Google to identify you, connect to the selected account, and match remote capture requests. The connected account and information about pending uploads are stored on your Android device.</p>
+      <p>If you authorize Google Drive, ScheduleCam uses file-level access (<code>drive.file</code>) limited to files it works with. The app creates a ScheduleCam folder in your Drive and uploads captures directly from the device to Google Drive. To avoid duplicate uploads, the app looks up the target folder and previously uploaded files. If a connection is interrupted, the app uses its saved copy to resume the transfer.</p>
+      <p>If you choose <strong>Drive only</strong>, ScheduleCam uploads new captures and verifies their file size and checksum in Drive before removing the copies from your Android device. The device keeps the files while uploads are pending.</p>
+      <p>ScheduleCam uses information obtained from Google for the purposes described above: authentication, saving files to your Drive, and matching remote capture requests. Our use and transfer of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    </section>
+    <section>
+      <h2>Remote capture requests</h2>
+      <p>When you use remote capture, Google Cloud services process your Google Account identifier, a device notification token, device-matching information, and the capture request, its status, and its timestamps. The relay checks that the request belongs to you, notifies the Android device, and returns the capture status to the browser. Captures are stored on the Android device and, if connected, in your Google Drive according to your save destination.</p>
+    </section>
+    <section>
+      <h2>Disconnecting and deleting data</h2>
+      <p>You can stop automatic uploads from the <strong>Google Drive</strong> setting in the app. You can also revoke access in your Google Account’s connected app settings. To delete uploaded files, delete them in Google Drive. To request deletion of data stored by the remote capture relay, contact support below.</p>
+    </section>
+    <footer id="contact">
+      <h2>Contact</h2>
+      <p>For privacy questions or deletion requests, contact ICHITAP’s ScheduleCam support.</p>
+      <a href="mailto:ichitap-support@googlegroups.com">Email ScheduleCam support</a>
+    </footer>
+  </main>
+</body>
+</html>
