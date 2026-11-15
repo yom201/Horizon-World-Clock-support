@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8faf8">
   <title>ScheduleCam · Scheduled photos and videos for Android</title>
-  <meta name="description" content="Schedule automatic photos and videos on Android. Upload captures to Google Drive and choose Drive only to free up space on your phone.">
+  <meta name="description" content="Schedule automatic photos and videos on Android with the screen off or the phone locked. Optionally upload your captures to Google Drive.">
   <link rel="canonical" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="stylesheet" href="./site.css">
   <link rel="stylesheet" href="./demo.css">
@@ -18,6 +18,7 @@
     <nav aria-label="Main navigation">
       <a href="#try-demo">Try the app</a>
       <a href="#drive">Google Drive</a>
+      <a href="#compare">Compare</a>
       <a href="#ideas">Use cases</a>
       <a class="nav-cta" href="#availability">Availability <span aria-hidden="true">↗</span></a>
     </nav>
@@ -25,40 +26,64 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="indicator"></span> Photos and video on Android</p>
-        <h1 id="title">Schedule your<br>camera.</h1>
-        <p>Set a time or interval for automatic photos and videos while you’re away. Connect Google Drive and choose <strong>Drive only</strong> to save space on your phone.</p>
+        <p class="eyebrow"><span class="indicator"></span> Scheduled camera for Android</p>
+        <h1 id="title">Capture with<br>the screen off.</h1>
+        <p>Pick a time or interval, then lock your Android or turn off its display. ScheduleCam takes photos or records video automatically while you’re away.</p>
         <div class="hero-actions">
           <a class="button primary" href="#try-demo">Try the app <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="#drive">Drive options <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#drive">Drive only <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <figure class="hero-image">
         <img src="./assets/scheduled-capture.webp" width="1120" height="1400" alt="An Android phone on a tripod with its rear camera facing a plant by a sunlit window" fetchpriority="high">
+        <span class="screen-state"><span class="indicator"></span>Screen off</span>
         <figcaption class="capture-plan">
           <div class="capture-plan-heading">
             <span class="capture-clock" aria-hidden="true"></span>
             <span><strong>Automatic photos</strong><small>Example · every 30 minutes</small></span>
           </div>
           <ul class="capture-slots" aria-label="Example capture times">
-            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="08:00">08:00</time></li>
-            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="08:30">08:30</time></li>
-            <li><span class="camera-icon" aria-hidden="true"></span><time datetime="09:00">09:00</time></li>
+            <li><time datetime="08:00">08:00</time></li>
+            <li><time datetime="08:30">08:30</time></li>
+            <li><time datetime="09:00">09:00</time></li>
           </ul>
         </figcaption>
       </figure>
     </section>
 
+    <nav class="section-links wrap" aria-label="Page sections">
+      <a href="#screen-off">Screen-off capture</a>
+      <a href="#compare">Compare cameras</a>
+      <a href="#ideas">Use cases</a>
+    </nav>
+
+    <section class="screen-off wrap" id="screen-off" aria-labelledby="screen-off-title">
+      <div>
+        <p class="eyebrow"><span class="indicator"></span> While your phone is locked</p>
+        <h2 id="screen-off-title">Set up the shot.<br>Leave it in place.</h2>
+        <p>Open ScheduleCam, aim the camera, and tap <strong>Schedule capture</strong>. If Android asks for camera, alarm, or notification permissions, allow them and tap <strong>Schedule capture</strong> again. Once the next capture appears, you can lock the device.</p>
+        <a class="screen-off-link" href="#timing">What affects capture timing? <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="locked-example">
+        <p class="locked-label">Example · a scheduled morning photo</p>
+        <ol class="locked-timeline" role="list">
+          <li><time datetime="07:55">07:55</time><div><strong>Schedule started</strong><p>The next photo is set for 08:00.</p></div></li>
+          <li><time datetime="07:56">07:56</time><div><strong>Screen off</strong><p>Lock the phone and leave it aimed at the scene.</p></div></li>
+          <li><time datetime="08:00">08:00</time><div><strong>Photo saved</strong><p>ScheduleCam takes the photo while the display is off.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="process wrap" id="how" aria-labelledby="how-title">
       <div class="process-copy">
         <p class="eyebrow"><span class="indicator"></span> How it works</p>
-        <h2 id="how-title">From a schedule<br>to a saved capture.</h2>
+        <h2 id="how-title">Build the schedule<br>you need.</h2>
         <ol class="steps" role="list">
-          <li><span class="step-number" aria-hidden="true">1</span><h3>Pick a time or an interval</h3><p>Add up to 30 one-time capture times, or choose a start, an end, and an interval for a repeating schedule.</p></li>
-          <li><span class="step-number" aria-hidden="true">2</span><h3>Choose photo or video</h3><p>Set your camera and tap Schedule capture. With the required permissions, the camera can take photos or record 1–10 minute clips while the screen is off or locked.</p></li>
-          <li><span class="step-number" aria-hidden="true">3</span><h3>Open captures wherever you are</h3><p>Review them on your phone or open them from another device with <a href="#drive">Google Drive</a>.</p></li>
+          <li><span class="step-number" aria-hidden="true">1</span><h3>One-time captures</h3><p>Pick up to 30 dates and times. Set three photos for different times of day, or schedule a single clip for a specific moment.</p></li>
+          <li><span class="step-number" aria-hidden="true">2</span><h3>Repeating captures</h3><p>Set a start, an end, and an interval. The phone keeps the same framing as it takes a series of photos or video clips.</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>Choose the camera and format</h3><p>Set the lens, zoom, and resolution available on your phone. For video, choose a length from 1 to 10 minutes and decide whether to record audio.</p></li>
         </ol>
-        <p class="hint">For repeated captures with the screen off, start with intervals of 15 minutes or longer. Android power management may delay or skip captures.</p>
+        <p class="hint">Try a schedule in the browser preview. Change the mode, camera, or save destination, then tap <strong>Schedule capture</strong> to see what you set.</p>
       </div>
       <figure class="product" id="try-demo" tabindex="-1">
         <div class="product-background">
@@ -194,42 +219,172 @@
       </div>
     </section>
 
+    <section class="comparison wrap" id="compare" aria-labelledby="compare-title">
+      <div class="comparison-copy">
+        <p class="eyebrow"><span class="indicator"></span> ScheduleCam and network cameras</p>
+        <h2 id="compare-title">More detail in a scheduled photo.</h2>
+        <p>Use the camera on your Android and choose an available lens, zoom, and resolution. A higher-resolution still gives you more pixels to crop when you want to inspect a leaf, a gauge, or a printed layer.</p>
+        <div class="comparison-uses">
+          <article><h3>ScheduleCam</h3><p>Planned photos and short clips at specific times. Use an Android phone you already have and review the saved files on the phone or in Google Drive.</p></article>
+          <article><h3>Network camera</h3><p>A dedicated camera is a better fit for a live view, motion notifications, or infrared night vision. Features vary by model.</p></article>
+        </div>
+      </div>
+      <figure class="resolution-example">
+        <figcaption>Pixel count in one example</figcaption>
+        <dl class="resolution-values">
+          <div>
+            <dt>ScheduleCam still · AQUOS wish5</dt>
+            <dd><div class="resolution-meta"><strong>8.0 MP</strong><span>2,448 × 3,264</span></div>
+              <div class="resolution-bar phone-still" aria-hidden="true"><span></span></div>
+            </dd>
+          </div>
+          <div>
+            <dt>Tapo C210 network camera video</dt>
+            <dd><div class="resolution-meta"><strong>3.0 MP</strong><span>2,304 × 1,296</span></div>
+              <div class="resolution-bar network-video" aria-hidden="true"><span></span></div>
+            </dd>
+          </div>
+        </dl>
+        <p>The tested phone still contains about <strong>2.7× as many pixels</strong> as a frame at the C210’s listed video resolution. Image quality also depends on the camera, lens, light, and settings.</p>
+        <a href="https://www.tp-link.com/us/home-networking/cloud-camera/tapo-c210/v1/">Tapo C210 specifications</a>
+      </figure>
+    </section>
+
     <section class="ideas" id="ideas" aria-labelledby="ideas-title">
       <div class="wrap">
         <p class="eyebrow"><span class="indicator"></span> Use cases</p>
-        <h2 id="ideas-title">Six ways to capture<br>what happens while you’re away.</h2>
-        <div class="case-grid">
-          <article>
-            <p class="mode">Daily photo</p>
-            <h3>Houseplants during a trip</h3>
-            <p>Before you travel, aim a spare phone at your seedlings. Schedule a photo each morning to see what grew while you were away.</p>
+        <h2 id="ideas-title">What to capture<br>while you’re away.</h2>
+
+        <section class="case-group" aria-labelledby="home-cases">
+          <h3 id="home-cases">At home</h3>
+          <div class="case-features">
+            <article>
+              <img src="./assets/pet-at-home.webp" width="960" height="640" alt="A dog resting by a sunlit window in an otherwise empty room" loading="lazy">
+              <div class="case-feature-copy">
+                <p class="mode">One-time photos</p>
+                <h4>See how your pet spends the afternoon</h4>
+                <p>Aim an Android at your pet’s usual bed before you go to work. Schedule photos at lunch and mid-afternoon, then open the captures in Drive to see whether your pet was resting there.</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/vacant-room.webp" width="960" height="640" alt="Sunlight from a tall window crossing the floor of an empty room" loading="lazy">
+              <div class="case-feature-copy">
+                <p class="mode">One-time photos</p>
+                <h4>See where sunlight falls in a vacant room</h4>
+                <p>Leave the phone in a fixed corner before you go. Compare photos taken at 9 a.m., noon, and 3 p.m. to decide where a desk or plants would go.</p>
+              </div>
+            </article>
+          </div>
+          <div class="case-grid">
+            <article>
+              <p class="mode">One-time photo</p>
+              <h4>Plan an after-school family check-in</h4>
+              <p>Agree with your child on a photo at your usual check-in time in a shared room. Review that photo when it reaches Drive. For an immediate check-in, call them directly.</p>
+            </article>
+            <article>
+              <p class="mode">Daily photo</p>
+              <h4>Check houseplants while traveling</h4>
+              <p>Before a trip, aim a spare phone at a group of pots. A photo each morning shows which plants droop or put out new leaves while you’re away.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-group" aria-labelledby="farm-cases">
+          <h3 id="farm-cases">On the farm and outdoors</h3>
+          <article class="case-spotlight">
+            <img src="./assets/strawberry-growth.webp" width="960" height="640" alt="A strawberry plant with a blossom and berries in a greenhouse" loading="lazy">
+            <div class="case-feature-copy">
+              <p class="mode">Daily photo</p>
+              <h4>Follow the same strawberries every morning</h4>
+              <p>Set the phone at the end of a strawberry row before leaving the farm. Take a photo at 8 a.m. each day from the same angle. Compare the blossom, green fruit, and ripening berries to see how each cluster develops between visits.</p>
+            </div>
           </article>
-          <article>
-            <p class="mode">Repeating photos</p>
-            <h3>Water levels after rainfall</h3>
-            <p>Before leaving the field station, aim a phone at its water-level gauge. Take photos every 30 minutes so you can see how the level changed after the rain.</p>
+          <div class="case-grid">
+            <article>
+              <p class="mode">One-time photos</p>
+              <h4>Check a distant farm after irrigation</h4>
+              <p>From a sheltered position, frame a row and a visible patch of soil. Schedule photos before watering and later in the afternoon so you can compare the row from another site.</p>
+            </article>
+            <article>
+              <p class="mode">One-time photos</p>
+              <h4>Check greenhouse vents between visits</h4>
+              <p>Point the phone at a timed vent in a polytunnel or greenhouse. Compare photos at opening time, midday, and closing time to check the vent’s position during the day.</p>
+            </article>
+            <article>
+              <p class="mode">Repeating photos</p>
+              <h4>Read a water gauge after rain</h4>
+              <p>Before leaving the field station, aim the phone at a marked gauge from under cover. Compare photos every 30 minutes to see how the water level changed after the rain.</p>
+            </article>
+            <article>
+              <p class="mode">Scheduled video</p>
+              <h4>Catch the usual morning rush at a bird feeder</h4>
+              <p>Before leaving home, point the phone at a feeder. Schedule a 10-minute clip during the time birds usually arrive and watch it later.</p>
+            </article>
+          </div>
+          <p class="case-note">Check your phone’s water-resistance rating and operating conditions. Use a sheltered spot away from rain, spray, and condensation. <a href="https://support.google.com/pixelphone/answer/7533279?hl=en">Google’s water-resistance guidance</a></p>
+        </section>
+
+        <section class="case-group" aria-labelledby="project-cases">
+          <h3 id="project-cases">In the workshop and at work</h3>
+          <article class="case-spotlight">
+            <img src="./assets/print-progress.webp" width="960" height="640" alt="A partly finished vase on a 3D printer in a shared workshop" loading="lazy">
+            <div class="case-feature-copy">
+              <p class="mode">Repeating photos</p>
+              <h4>Review a long 3D print from another site</h4>
+              <p>Leave a phone aimed at the printer in a shared lab before heading to another location. Capture a frame every 15 minutes and open the sequence in Drive to see which layers took shape.</p>
+            </div>
           </article>
-          <article>
-            <p class="mode">One-time photos</p>
-            <h3>Daylight in a vacant room</h3>
-            <p>Leave a phone at the property on your way to work. Schedule photos at 9 a.m., noon, and 3 p.m. to compare where sunlight falls over the course of the day.</p>
-          </article>
-          <article>
-            <p class="mode">Repeating photos</p>
-            <h3>An overnight lab test</h3>
-            <p>Start a material test before leaving the lab for the night. Review the scheduled photos the next morning to see when the surface began to change.</p>
-          </article>
-          <article>
-            <p class="mode">Repeating photos</p>
-            <h3>3D print progress off-site</h3>
-            <p>Set up a phone at the shared print lab before working off-site. Schedule a photo every 15 minutes during a long print and open the captures from your desk in Drive.</p>
-          </article>
-          <article>
-            <p class="mode">Scheduled video</p>
-            <h3>The morning bird feeder</h3>
-            <p>Before leaving home, aim a phone at the feeder and schedule a 10-minute video for the time birds usually arrive. Watch the clip later from another device.</p>
-          </article>
-        </div>
+          <div class="case-grid">
+            <article>
+              <p class="mode">Repeating photos</p>
+              <h4>Document an overnight material test</h4>
+              <p>Start the test before leaving the lab. Schedule photos every 30 minutes and review them the next morning to see when the surface started to change.</p>
+            </article>
+            <article>
+              <p class="mode">Daily photo</p>
+              <h4>Compare renovation progress between visits</h4>
+              <p>With the crew’s agreement, leave a phone in a fixed corner. Schedule an end-of-day photo after work wraps up so you can compare the room from the same angle on each day you’re off-site.</p>
+            </article>
+            <article>
+              <p class="mode">Scheduled video</p>
+              <h4>Review a display’s timed lighting sequence</h4>
+              <p>Set up a phone facing an exhibit before the venue closes. Schedule a short video to start just before the lighting controller switches on, then review the transitions before the next opening.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow"><span class="indicator"></span> Before you set up</p>
+        <h2 id="faq-title">Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details id="timing" open>
+          <summary>What interval should I use with the screen off?</summary>
+          <p>Start with 15 minutes or longer for repeating captures. When Android enters a power-saving or idle mode, ScheduleCam adjusts shorter repeating intervals to at least 15 minutes. Android can delay or skip a capture, depending on the device and its power settings.</p>
+        </details>
+        <details>
+          <summary>How do I schedule video with sound?</summary>
+          <p>Choose <strong>Video</strong> and enable audio, then allow microphone access when prompted. For repeating video, choose an interval longer than the clip so there’s time for each recording to finish.</p>
+        </details>
+        <details>
+          <summary>What happens if the phone is offline?</summary>
+          <p>Schedules run on the capture device and can save photos or videos locally while it’s offline. If you’ve connected Google Drive, pending uploads retry when your connection returns.</p>
+        </details>
+        <details>
+          <summary>How do I view or export a capture?</summary>
+          <p>Open <strong>Captures</strong> to view a photo or play a video on your phone. Use <strong>Save a copy</strong> to export a file from the app. You can also open any uploaded files in your ScheduleCam folder in Google Drive.</p>
+        </details>
+        <details>
+          <summary>How do I stop a schedule?</summary>
+          <p>Tap <strong>Stop schedule</strong> in ScheduleCam or use the stop action in its notification. Clearing the schedule notification also stops the schedule. Start a new schedule after restarting your phone.</p>
+        </details>
+        <details>
+          <summary>What if Android blocks camera access?</summary>
+          <p>ScheduleCam skips that capture and reports the camera restriction in the app or notification. An active repeating schedule continues with its next available slot.</p>
+        </details>
       </div>
     </section>
 
