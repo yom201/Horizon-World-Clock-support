@@ -1,0 +1,72 @@
+.jp-page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Meiryo", sans-serif;
+}
+.jp-page p, .jp-page li, .jp-page summary {
+  line-height: 1.75;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+.jp-page h1, .jp-page h2, .jp-page h3 {
+  margin: 0;
+  font-family: inherit;
+  letter-spacing: 0;
+  line-height: 1.38;
+  line-break: strict;
+}
+.jp-page :is(h1, h2, h3) span { display: inline-block; white-space: nowrap; }
+.jp-page p { margin: .75rem 0; }
+.jp-header, .jp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .65rem 1.35rem;
+  padding-block: 1.25rem;
+}
+.jp-header nav, .jp-footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; }
+.jp-page nav a { display: inline-block; }
+.jp-header, .jp-crumb, .jp-section { border-bottom: 1px solid #d9e5df; }
+.jp-crumb { display: flex; flex-wrap: wrap; gap: .25rem .7rem; padding-block: .8rem; font-size: .875rem; }
+.jp-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 7vw, 5rem);
+}
+.jp-hero h1 { font-size: clamp(1.8rem, 5.2vw, 4.5rem); }
+.jp-hero .jp-kicker { margin: 0 0 .5rem; color: #136b51; font-weight: 700; }
+.jp-hero .jp-intro { font-size: clamp(1rem, 1.7vw, 1.25rem); margin-bottom: 1.15rem; word-break: auto-phrase; text-wrap: pretty; }
+.jp-image { display: grid; justify-items: center; gap: .55rem; margin: 0; }
+.jp-image img { display: block; width: 100%; height: auto; max-width: 420px; border-radius: 1rem; }
+.jp-product .jp-image img { max-height: 470px; object-fit: cover; }
+.jp-phone img { width: min(100%, 224px); }
+.jp-image figcaption { font-size: .85rem; line-height: 1.6; color: #43566a; }
+.jp-section { padding-block: clamp(1.85rem, 5vw, 3.3rem); }
+.jp-section h2 { font-size: clamp(1.4rem, 3.25vw, 2.45rem); margin-bottom: .9rem; }
+.jp-section h3 { font-size: clamp(1.1rem, 2.3vw, 1.55rem); margin-top: 1.1rem; }
+.jp-section p { max-width: 52rem; }
+.jp-guides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.jp-guides article { padding: clamp(1rem, 2.5vw, 1.6rem); border: 1px solid #d9e5df; border-radius: 1rem; background: white; }
+.jp-guides h3 { margin-top: 0; }
+.jp-steps, .jp-answers { max-width: 52rem; }
+.jp-steps { padding-left: 1.55rem; }
+.jp-steps li { padding: .3rem 0 .35rem .25rem; }
+.jp-steps li p { margin: .2rem 0 .5rem; }
+.jp-answers details { border-bottom: 1px solid #d9e5df; padding: .65rem 0; }
+.jp-answers summary { padding: .15rem 0; cursor: pointer; font-weight: 700; word-break: auto-phrase; }
+.jp-page .button { white-space: nowrap; }
+.jp-page .jp-jump, .jp-section a:not(.button), .jp-page nav a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+@media (max-width: 760px) {
+  .jp-hero, .jp-guides { grid-template-columns: minmax(0, 1fr); }
+  .jp-hero { align-items: start; }
+  .jp-hero h1 { font-size: clamp(1.8rem, 6.5vw, 3.25rem); }
+  .jp-image { justify-items: start; }
+  .jp-product .jp-image img { max-height: 360px; }
+}
+@media (max-width: 460px) {
+  .jp-header, .jp-footer { align-items: flex-start; }
+}
