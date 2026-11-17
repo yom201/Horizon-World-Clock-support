@@ -2,6 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Google Ads: basic consent mode, enabled after opt-in -->
+  <script>
+    (() => {
+      const tagId = 'AW-18323894522';
+      const choiceKey = 'horizon-world-clock-en-ad-measurement';
+      let started = false;
+      let choice;
+      try { choice = localStorage.getItem(choiceKey); } catch {}
+
+      const denied = {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      };
+
+      function enableMeasurement() {
+        if (started) return;
+        started = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        gtag('consent', 'default', denied);
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+        gtag('js', new Date());
+        gtag('config', tagId);
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + tagId;
+        document.head.append(tag);
+      }
+
+      if (choice === 'allow') enableMeasurement();
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const settings = document.getElementById('ad-measurement');
+        const status = document.getElementById('ad-measurement-status');
+        function displayChoice() {
+          status.textContent = choice === 'allow' ? 'Advertising measurement is on.'
+            : choice === 'decline' ? 'Advertising measurement is off.' : '';
+        }
+        displayChoice();
+        settings.hidden = false;
+        for (const button of settings.querySelectorAll('button[data-choice]')) {
+          button.addEventListener('click', () => {
+            choice = button.dataset.choice;
+            try { localStorage.setItem(choiceKey, choice); } catch {}
+            displayChoice();
+            if (choice === 'allow') {
+              enableMeasurement();
+            } else if (started) {
+              gtag('consent', 'update', denied);
+              location.reload();
+            }
+          });
+        }
+      });
+    })();
+  </script>
+  <style>
+    #ad-measurement { padding-block: 0 19px; font-size: .84rem; }
+    #ad-measurement p { max-width: 52ch; margin: .35rem 0; }
+    #ad-measurement a { color: inherit; text-decoration: underline; padding: 0; }
+    #ad-measurement button {
+      border: 1px solid var(--muted);
+      border-radius: 6px;
+      padding: .4rem .7rem;
+      margin: .3rem .4rem 0 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c15">
   <meta name="description" content="See the local time and daylight in as many cities as you like. Add iPhone Home Screen widgets that follow each city’s sunrise and sunset.">
@@ -173,6 +246,13 @@
         <a lang="ja" hreflang="ja" href="../">日本語</a>
       </nav>
     </div>
+    <section class="shell" id="ad-measurement" aria-label="Advertising measurement" hidden>
+      <strong>Advertising measurement</strong>
+      <p>With your permission, we use Google Ads to measure visits from our ads. Google may use cookies for this measurement. You can change your choice here at any time. Read <a href="https://policies.google.com/privacy?hl=en">Google’s Privacy Policy</a>.</p>
+      <button type="button" data-choice="allow">Allow measurement</button>
+      <button type="button" data-choice="decline">Decline</button>
+      <p id="ad-measurement-status" role="status"></p>
+    </section>
   </footer>
 </body>
 </html>
