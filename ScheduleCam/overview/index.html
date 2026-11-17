@@ -82,24 +82,15 @@
         <p>Keep the phone online. On the other device, sign in with the same Google Account and tap <strong>Capture now</strong>. Once the file uploads, open it in Drive.</p>
         <a class="button primary remote-shutter-cta" href="https://ichitap-schedulecam.web.app/remote/">Open remote shutter <span aria-hidden="true">↗</span></a>
       </div>
-      <figure class="remote-shutter-flow">
-        <p>Example · checking on a finished print</p>
-        <div class="remote-shutter-devices">
-          <div class="remote-shutter-device from-browser">
-            <span class="remote-device-icon remote-browser-icon" aria-hidden="true"></span>
-            <span>Another device’s browser</span>
-            <strong>Capture now</strong>
-            <p>Send the request when a colleague says the print is done.</p>
-          </div>
-          <span class="remote-shutter-arrow" aria-hidden="true">→</span>
-          <div class="remote-shutter-device">
-            <span class="remote-device-icon remote-phone-icon" aria-hidden="true"></span>
-            <span>Android at the print lab</span>
-            <strong>Ready for remote capture</strong>
-            <p>The phone takes the shot using the settings you selected.</p>
-          </div>
-        </div>
-        <figcaption>Review the finished print in Drive after the photo uploads.</figcaption>
+      <figure class="remote-scene">
+        <img src="./ja/assets/remote-workshop.webp" width="1080" height="720" alt="A browser on a computer at home and an Android phone aimed at a 3D-printed vase in a workshop." loading="lazy" decoding="async">
+        <figcaption>
+          <ol class="remote-steps" role="list">
+            <li><span>Browser at home</span><strong>Capture now</strong></li>
+            <li><span>Android in the workshop</span><strong>Photograph the print</strong></li>
+          </ol>
+          <p>Check the finished print in Google Drive once the photo uploads.</p>
+        </figcaption>
       </figure>
     </section>
 
@@ -244,13 +235,19 @@
         </figure>
       </div>
       <div class="drive-choices">
-        <article class="drive-choice drive-only">
-          <span class="drive-icon" aria-hidden="true">↑</span>
-          <div><h3>Drive only</h3><p>Free up space on your phone. ScheduleCam removes the phone’s copy after verifying each upload.</p></div>
+        <article class="drive-option">
+          <img src="./ja/assets/drive-only.webp" width="750" height="500" alt="The uploaded photo remains in the cloud." loading="lazy" decoding="async">
+          <div>
+            <h3>Drive only</h3>
+            <p>ScheduleCam verifies the upload before removing the copy on your phone.</p>
+          </div>
         </article>
-        <article class="drive-choice">
-          <span class="drive-icon" aria-hidden="true">+</span>
-          <div><h3>Device and Drive</h3><p>Keep your captures on your phone as well as in Google Drive.</p></div>
+        <article class="drive-option">
+          <img src="./ja/assets/drive-and-phone.webp" width="750" height="500" alt="The same photo is saved on the phone and in the cloud." loading="lazy" decoding="async">
+          <div>
+            <h3>Device and Drive</h3>
+            <p>Keep your captures on your phone as well as in Google Drive.</p>
+          </div>
         </article>
         <p class="drive-note">While an upload is pending, ScheduleCam keeps a temporary copy on your phone so it can retry.</p>
       </div>
