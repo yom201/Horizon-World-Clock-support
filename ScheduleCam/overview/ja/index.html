@@ -89,24 +89,15 @@
         <p>両方の端末をインターネットに接続します。操作側のブラウザで同じGoogleアカウントにログインして<strong lang="en">Capture now</strong>を押し、転送が終わったファイルをDriveで開きます。</p>
         <a class="button primary remote-shutter-cta" href="https://ichitap-schedulecam.web.app/remote/">遠隔撮影ページを開く（英語） <span aria-hidden="true">↗</span></a>
       </div>
-      <figure class="remote-shutter-flow">
-        <p>例 · 3Dプリントの仕上がりを確認</p>
-        <div class="remote-shutter-devices">
-          <div class="remote-shutter-device from-browser">
-            <span class="remote-device-icon remote-browser-icon" aria-hidden="true"></span>
-            <span>別端末のブラウザ</span>
-            <strong lang="en">Capture now</strong>
-            <p>プリントの完了を聞いたら、ブラウザから撮影を指示します。</p>
-          </div>
-          <span class="remote-shutter-arrow" aria-hidden="true">→</span>
-          <div class="remote-shutter-device">
-            <span class="remote-device-icon remote-phone-icon" aria-hidden="true"></span>
-            <span>作業場のAndroid</span>
-            <strong>遠隔撮影の待機中</strong>
-            <p>スマホが設定したカメラで撮影します。</p>
-          </div>
-        </div>
-        <figcaption>写真がアップロードされたら、Driveで仕上がりを確認します。</figcaption>
+      <figure class="ja-remote-scene">
+        <img src="./assets/remote-workshop.webp" width="1080" height="720" alt="左は自宅のパソコンで開いたブラウザ。右は作業場でスマホのカメラを3Dプリントの花瓶に向けた様子。" loading="lazy" decoding="async">
+        <figcaption>
+          <ol class="ja-remote-steps" role="list">
+            <li><span>ブラウザで操作</span><strong lang="en">Capture now</strong></li>
+            <li><span>作業場のAndroid</span><strong>3Dプリントを撮影</strong></li>
+          </ol>
+          <p>撮影した写真をGoogle Driveで確認できます。</p>
+        </figcaption>
       </figure>
     </section>
 
@@ -245,20 +236,26 @@
         <figure class="drive-result">
           <div class="drive-result-file">
             <img src="../assets/strawberry-growth.webp" width="960" height="640" alt="" loading="lazy">
-            <div><strong>ScheduleCamフォルダ</strong><span>Google Driveの写真</span></div>
+            <div><strong>ScheduleCam</strong><span>Driveの写真</span></div>
             <span class="drive-result-check" aria-hidden="true">✓</span>
           </div>
           <figcaption>アップロードされた写真の表示例</figcaption>
         </figure>
       </div>
-      <div class="drive-choices">
-        <article class="drive-choice drive-only">
-          <span class="drive-icon" aria-hidden="true">↑</span>
-          <div><h3>Driveのみ</h3><p>Driveでファイルを確認できた後に、スマホの原本を削除して空き容量を確保します。</p></div>
+      <div class="drive-choices ja-drive-choices">
+        <article class="ja-drive-option">
+          <img src="./assets/drive-only.webp" width="750" height="500" alt="保存を確認した写真がクラウド側にだけ残っている" loading="lazy" decoding="async">
+          <div>
+            <h3>Driveのみ</h3>
+            <p>Driveへの保存を確認してから、スマホの原本を削除します。</p>
+          </div>
         </article>
-        <article class="drive-choice">
-          <span class="drive-icon" aria-hidden="true">+</span>
-          <div><h3>端末とDrive</h3><p>スマホとGoogle Driveの両方に撮影結果を残します。</p></div>
+        <article class="ja-drive-option">
+          <img src="./assets/drive-and-phone.webp" width="750" height="500" alt="同じ写真がスマホとクラウドの両方に残っている" loading="lazy" decoding="async">
+          <div>
+            <h3>端末とDrive</h3>
+            <p>スマホとGoogle Driveの両方に撮影結果を残します。</p>
+          </div>
         </article>
         <p class="drive-note">転送待ちのファイルはスマホに保持し、再接続後にアップロードを再試行します。</p>
       </div>
