@@ -264,3 +264,44 @@ p { margin: 0; }
   .remote-steps li { padding-inline: 9px; }
   .remote-scene figcaption > p { padding-inline: 9px; }
 }
+
+.ads-measurement {
+  padding: 14px 16px;
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.ads-measurement h2 { font-size: 1.05rem; letter-spacing: normal; }
+.ads-measurement h2:focus { outline: none; }
+.ads-measurement p { margin-top: 5px; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.ads-measurement p a { color: inherit; text-underline-offset: 3px; }
+.ads-measurement-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ads-measurement-actions button {
+  min-height: 42px;
+  padding: 6px 12px;
+  border: 1px solid var(--green);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ads-measurement-settings {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ads-measurement-settings:hover { text-decoration: underline; text-underline-offset: 4px; }
+.ads-measurement-actions button:focus-visible, .ads-measurement-settings:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}

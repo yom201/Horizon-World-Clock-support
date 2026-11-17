@@ -10,9 +10,10 @@
   <link rel="alternate" hreflang="en" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/ScheduleCam/overview/ja/">
   <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/ScheduleCam/overview/">
-  <link rel="stylesheet" href="./site.css?v=20261117-illustrations">
+  <link rel="stylesheet" href="./site.css?v=20261117-ads-measurement">
   <link rel="stylesheet" href="./demo.css">
   <script src="./demo.js" defer></script>
+  <script src="./ads-measurement.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,9 +24,17 @@
       <a href="#drive">Google Drive</a>
       <a href="#compare">Compare</a>
       <a href="#ideas">Use cases</a>
-      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam">Google Play <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam" data-ads-play-link>Google Play <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
+  <section class="ads-measurement wrap" id="ads-measurement" aria-labelledby="ads-measurement-title" hidden>
+    <h2 id="ads-measurement-title" tabindex="-1">Ad measurement</h2>
+    <p>Allow Google Ads to measure when you go from this page to Google Play. <a href="../privacy/#website-ad-measurement">Learn more</a></p>
+    <div class="ads-measurement-actions">
+      <button type="button" data-ads-consent="granted">Allow</button>
+      <button type="button" data-ads-consent="denied">Decline</button>
+    </div>
+  </section>
   <main id="main">
     <section class="hero wrap" aria-labelledby="title">
       <div class="hero-copy">
@@ -33,7 +42,7 @@
         <h1 id="title">Capture with<br>the screen off.</h1>
         <p>Schedule Android photos and videos for the times you choose, even with the screen off or the phone locked. Choose device storage to keep home footage on your phone.</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam">Get it on Google Play <span aria-hidden="true">↗</span></a>
+          <a class="button primary" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam" data-ads-play-link>Get it on Google Play <span aria-hidden="true">↗</span></a>
           <a class="button secondary" href="#try-demo">Try the demo <span aria-hidden="true">↓</span></a>
         </div>
         <a class="hero-remote-link" href="#remote-shutter">Remote shutter <span aria-hidden="true">↓</span></a>
@@ -454,7 +463,7 @@
             <div>
               <strong>Available on Google Play</strong>
               <p>7-day in-app trial. A monthly subscription is required to keep capturing after the trial.</p>
-              <a class="source-link" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam">Get it on Google Play <span aria-hidden="true">↗</span></a>
+              <a class="source-link" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam" data-ads-play-link>Get it on Google Play <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <p class="ios-note">ScheduleCam has no planned iOS release. iOS prevents apps from starting scheduled camera captures in the background while the screen is off or the device is locked.</p>
@@ -469,6 +478,7 @@
       <a href="./ja/" lang="ja" hreflang="ja">日本語</a>
       <a href="../privacy/">Privacy Policy</a>
       <a href="../privacy/#contact">Contact support</a>
+      <button class="ads-measurement-settings" id="ads-measurement-settings" type="button" aria-controls="ads-measurement" aria-expanded="false" hidden>Ad measurement settings</button>
     </nav>
   </footer>
 </body>
