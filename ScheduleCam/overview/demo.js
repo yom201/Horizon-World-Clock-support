@@ -16,7 +16,9 @@
   const nextTime = document.getElementById("demo-next-time");
   const summary = document.getElementById("demo-summary");
   const message = document.getElementById("demo-message");
-  const displayDate = new Intl.DateTimeFormat("en", {
+  const japanese = document.documentElement.lang === "ja";
+  const text = (english, japaneseText) => japanese ? japaneseText : english;
+  const displayDate = new Intl.DateTimeFormat(text("en", "ja"), {
     month: "short", day: "numeric", year: "numeric",
     hour: "2-digit", minute: "2-digit", hourCycle: "h23",
   });
@@ -41,11 +43,11 @@
     const rear = fields.lens.value === "rear";
     fillOptions(fields.zoom, rear ? ["1×", "1.5×", "2×", "3×"] : ["1×", "1.5×"]);
     if (fields.kind.value === "video") {
-      fillOptions(fields.resolution, ["Auto", "Full HD", "HD", "SD"]);
+      fillOptions(fields.resolution, [text("Auto", "自動"), "Full HD", "HD", "SD"]);
     } else {
       fillOptions(fields.resolution, rear
-        ? ["Auto", "4000 × 3000", "1920 × 1080"]
-        : ["Auto", "3264 × 2448", "1920 × 1080"]);
+        ? [text("Auto", "自動"), "4000 × 3000", "1920 × 1080"]
+        : [text("Auto", "自動"), "3264 × 2448", "1920 × 1080"]);
     }
   }
 
@@ -82,12 +84,12 @@
       const remove = row.querySelector("button");
       field.id = "demo-capture-time-" + (index + 1);
       label.htmlFor = field.id;
-      label.textContent = "Capture " + (index + 1);
-      remove.setAttribute("aria-label", "Remove capture " + (index + 1));
+      label.textContent = text(`Capture ${index + 1}`, `撮影 ${index + 1}`);
+      remove.setAttribute("aria-label", text(`Remove capture ${index + 1}`, `撮影 ${index + 1}を削除`));
       remove.hidden = rows.length === 1;
     });
     add.disabled = rows.length >= maxTimes;
-    add.textContent = add.disabled ? "30 times added" : "Add time";
+    add.textContent = add.disabled ? text("30 times added", "30件追加済み") : text("Add time", "日時を追加");
   }
 
   function addTime(value, focus = false) {
@@ -114,43 +116,46 @@
       const slots = [...times.querySelectorAll("input")]
         .map(field => ({ field, time: timeValue(field) }));
       const invalid = slots.find(slot => !(slot.time > now));
-      if (invalid) return reject(invalid.field, "Choose a capture time in the future.");
+      if (invalid) return reject(invalid.field, text("Choose a capture time in the future.", "未来の撮影日時を指定してください。"));
       slots.sort((a, b) => a.time - b.time);
       for (let index = 1; index < slots.length; index += 1) {
         const previous = slots[index - 1];
         const current = slots[index];
-        if (current.time === previous.time) return reject(current.field, "Choose a different time for each capture.");
+        if (current.time === previous.time) return reject(current.field, text("Choose a different time for each capture.", "撮影日時が重複しています。"));
         if (duration && current.time - previous.time <= duration * minute) {
-          return reject(current.field, "Leave more time between captures than the video length.");
+          return reject(current.field, text("Leave more time between captures than the video length.", "動画の長さより長い間隔を空けてください。"));
         }
       }
-      return { time: slots[0].time, cadence: "One-time · " + slots.length + (slots.length === 1 ? " capture" : " captures") };
+      return { time: slots[0].time, cadence: text(`One-time · ${slots.length}${slots.length === 1 ? " capture" : " captures"}`, `単発・${slots.length}件`) };
     }
 
     const first = timeValue(fields.start);
     const last = timeValue(fields.end);
     const interval = fields.interval.valueAsNumber;
-    if (!(first > now)) return reject(fields.start, "Choose a start time in the future.");
-    if (!(last > first)) return reject(fields.end, "Choose an end time after the start.");
-    if (!Number.isInteger(interval) || interval < 1) return reject(fields.interval, "Enter a whole number of minutes, at least 1.");
-    if (interval <= duration) return reject(fields.interval, "Set an interval longer than the video length.");
-    if (last - first < duration * minute) return reject(fields.end, "Leave enough time to record the first video.");
-    return { time: first, cadence: "Repeat · every " + interval + " min", end: last };
+    if (!(first > now)) return reject(fields.start, text("Choose a start time in the future.", "未来の開始日時を指定してください。"));
+    if (!(last > first)) return reject(fields.end, text("Choose an end time after the start.", "終了日時は開始日時より後にしてください。"));
+    if (!Number.isInteger(interval) || interval < 1) return reject(fields.interval, text("Enter a whole number of minutes, at least 1.", "間隔は1分以上の整数で入力してください。"));
+    if (interval <= duration) return reject(fields.interval, text("Set an interval longer than the video length.", "動画の長さより長い間隔を設定してください。"));
+    if (last - first < duration * minute) return reject(fields.end, text("Leave enough time to record the first video.", "最初の動画を撮り終えられる終了日時を指定してください。"));
+    return { time: first, cadence: text(`Repeat · every ${interval} min`, `繰り返し・${interval}分間隔`), end: last };
   }
 
   function showSchedule({ time, cadence, end }) {
     const isVideo = fields.kind.value === "video";
     const capture = isVideo
-      ? "Video · " + selectedLabel(fields.duration) + " · " + selectedLabel(fields.audio).toLowerCase()
-      : "Photo";
+      ? text(
+        `Video · ${selectedLabel(fields.duration)} · ${selectedLabel(fields.audio).toLowerCase()}`,
+        `動画・${selectedLabel(fields.duration)}・音声${selectedLabel(fields.audio)}`
+      )
+      : text("Photo", "写真");
     const rows = [
-      ["Schedule", cadence],
-      ["Capture", capture],
-      ["Camera", selectedLabel(fields.lens) + " · " + selectedLabel(fields.zoom)],
-      ["Resolution", selectedLabel(fields.resolution)],
-      ["Save to", selectedLabel(fields.destination)],
+      [text("Schedule", "予約方法"), cadence],
+      [text("Capture", "撮影の種類"), capture],
+      [text("Camera", "カメラ"), selectedLabel(fields.lens) + " · " + selectedLabel(fields.zoom)],
+      [text("Resolution", "解像度"), selectedLabel(fields.resolution)],
+      [text("Save to", "保存先"), selectedLabel(fields.destination)],
     ];
-    if (end) rows.splice(1, 0, ["Ends", displayDate.format(end)]);
+    if (end) rows.splice(1, 0, [text("Ends", "終了日時"), displayDate.format(end)]);
     summary.replaceChildren(...rows.map(([name, value]) => {
       const item = document.createElement("div");
       const title = document.createElement("dt");
@@ -163,7 +168,7 @@
     nextTime.textContent = displayDate.format(time);
     draft.hidden = start.hidden = true;
     status.hidden = stop.hidden = false;
-    clearMessage("Schedule preview ready.");
+    clearMessage(text("Schedule preview ready.", "予約のプレビューを表示しました。"));
     next.focus();
   }
 
@@ -222,17 +227,17 @@
 
   stop.addEventListener("click", () => {
     openDraft();
-    clearMessage("Schedule preview stopped.");
+    clearMessage(text("Schedule preview stopped.", "予約のプレビューを停止しました。"));
     start.focus();
   });
 
   document.getElementById("demo-reset").addEventListener("click", () => {
     reset();
-    clearMessage("Preview settings reset.");
+    clearMessage(text("Preview settings reset.", "設定を初期化しました。"));
   });
 
   reset();
-  document.getElementById("demo-caption").textContent = "Interactive preview. Settings apply only in this browser.";
+  document.getElementById("demo-caption").textContent = text("Interactive preview. Settings apply only in this browser.", "ブラウザで試せる操作デモです。実際の撮影は行いません。");
   document.getElementById("schedule-demo-fallback").hidden = true;
   demo.hidden = false;
 })();

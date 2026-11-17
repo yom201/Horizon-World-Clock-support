@@ -5,59 +5,495 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8faf8">
   <title>Androidの画面オフ・ロック中に予約撮影｜ScheduleCam</title>
-  <meta name="description" content="Androidの画面を消したままでも、スマホをロックしていても、指定した時刻に写真・動画を自動撮影。インターバル撮影、端末内の保存、ブラウザからの遠隔撮影、Google Drive自動保存に対応。">
+  <meta name="description" content="画面OFF・ディスプレイ消灯中やスマホをロックしたまま、指定時刻に写真・動画を撮影。Androidで予約撮影、インターバル撮影、ブラウザからの遠隔撮影、Google Drive自動保存。">
   <link rel="canonical" href="https://support.ichitap.com/ScheduleCam/overview/ja/">
-  <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/ScheduleCam/overview/ja/">
   <link rel="alternate" hreflang="en" href="https://support.ichitap.com/ScheduleCam/overview/">
+  <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/ScheduleCam/overview/ja/">
   <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="stylesheet" href="../site.css">
-  <link rel="stylesheet" href="./guide.css">
+  <link rel="stylesheet" href="../demo.css">
+  <link rel="stylesheet" href="./overview.css">
+  <script src="../demo.js" defer></script>
 </head>
-<body class="jp-page">
+<body class="ja-overview">
   <a class="skip" href="#main">本文へ移動</a>
-  <header class="jp-header wrap">
-    <a class="brand" href="https://support.ichitap.com/ScheduleCam/overview/ja/"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
-    <nav aria-label="主なリンク">
-      <a href="https://support.ichitap.com/ScheduleCam/overview/ja/#guides">使い方</a>
-      <a href="https://support.ichitap.com/ScheduleCam/overview/" lang="en" hreflang="en">English</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
+    <nav aria-label="主なナビゲーション">
+      <a href="#try-demo">予約を試す</a>
+      <a href="#screenshots">アプリの画面</a>
+      <a href="#drive">Google Drive</a>
+      <a href="#compare">カメラの比較</a>
+      <a href="#ideas">活用例</a>
+      <a class="ja-language" href="../" lang="en" hreflang="en">English</a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam&amp;hl=ja&amp;gl=JP">Google Play <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
-  <main class="wrap" id="main">
-    <section class="jp-hero jp-product">
-      <div>
-        <p class="jp-kicker">Android 14以降</p>
-        <h1><span>画面オフでも、</span> <span>予約撮影。</span></h1>
-        <p class="jp-intro">Androidのカメラで、指定した日時に写真・動画を自動撮影。画面OFFでも、スマホをロックしたままでも、予約時刻に撮影を開始できます。</p>
-        <a class="button primary" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam&amp;hl=ja&amp;gl=JP">Google Play で入手 <span aria-hidden="true">↗</span></a>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="indicator"></span> Androidの予約撮影アプリ</p>
+        <h1 id="title"><span>画面オフでも、</span><br><span>予約撮影。</span></h1>
+        <p>画面OFFでも、スマホをロックしたままでも、指定した時刻に写真・動画を撮影。端末内保存を選べば、撮影結果をスマホだけに残せます。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam&amp;hl=ja&amp;gl=JP">Google Play で入手 <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#try-demo">予約を試す <span aria-hidden="true">↓</span></a>
+        </div>
+        <a class="hero-remote-link" href="#screenshots">アプリの画面 <span aria-hidden="true">↓</span></a>
+        <a class="hero-remote-link" href="#remote-shutter">遠隔撮影 <span aria-hidden="true">↓</span></a>
       </div>
-      <figure class="jp-image">
-        <img src="../assets/scheduled-capture.webp" width="1120" height="1400" alt="窓辺の植物を撮る位置に固定したAndroidスマホ" fetchpriority="high">
-        <figcaption>撮影例 · 30分おきに植物の変化を記録</figcaption>
+      <figure class="hero-image">
+        <img src="../assets/scheduled-capture.webp" width="1120" height="1400" alt="窓辺の植物にカメラを向けて三脚に固定したAndroidスマホ" fetchpriority="high">
+        <span class="screen-state"><span class="indicator"></span>画面OFF</span>
+        <figcaption class="capture-plan">
+          <div class="capture-plan-heading">
+            <span class="capture-clock" aria-hidden="true"></span>
+            <span><strong>写真を自動撮影</strong><small>撮影例 · 30分おき</small></span>
+          </div>
+          <ul class="capture-slots" aria-label="撮影時刻の例">
+            <li><time datetime="08:00">08:00</time></li>
+            <li><time datetime="08:30">08:30</time></li>
+            <li><time datetime="09:00">09:00</time></li>
+          </ul>
+        </figcaption>
       </figure>
     </section>
-    <section class="jp-section" id="guides">
-      <h2>目的に合わせて撮影する</h2>
-      <div class="jp-guides">
-        <article><h3><span>画面を消したまま</span> <span>写真・動画を撮影</span></h3><p>ディスプレイが消灯した状態や、画面ロック中に予約時刻を迎えても撮影を開始できます。必要な設定と、撮れないときの確認項目を紹介します。</p><a href="https://support.ichitap.com/ScheduleCam/overview/ja/screen-off/">画面オフ・ロック中に撮影する方法 →</a></article>
-        <article><h3><span>時刻を指定して</span> <span>インターバル撮影</span></h3><p>一度だけの撮影も、同じ場所を一定間隔で記録する定点撮影も。写真の連続記録や、決めた長さの動画を繰り返し撮影できます。</p><a href="https://support.ichitap.com/ScheduleCam/overview/ja/interval-camera/">インターバル撮影と時刻指定の使い方 →</a></article>
+
+    <nav class="section-links wrap" aria-label="このページの内容">
+      <a href="#screen-off">画面オフ撮影</a>
+      <a href="#screenshots">アプリの画面</a>
+      <a href="#compare">カメラの比較</a>
+      <a href="#ideas">活用例</a>
+      <a href="../" lang="en" hreflang="en">English</a>
+    </nav>
+
+    <section class="screen-off wrap" id="screen-off" aria-labelledby="screen-off-title">
+      <div>
+        <p class="eyebrow"><span class="indicator"></span> 消灯・画面ロック中の撮影</p>
+        <h2 id="screen-off-title"><span>スマホを置いて、</span><br><span>決めた時刻に撮る。</span></h2>
+        <p>カメラを被写体に向け、<strong>撮影を予約</strong>を押します。画面の案内に沿ってカメラ・アラーム・通知を許可し、必要ならもう一度予約します。「次の撮影」が出たら、ディスプレイを消灯したり、スマホをロックしたりできます。</p>
+        <a class="screen-off-link" href="#timing">撮影間隔と省電力設定 <span aria-hidden="true">↓</span></a>
+        <a class="screen-off-link" href="./screen-off/">画面オフ・ロック中の撮影手順 →</a>
+      </div>
+      <figure class="locked-example screen-figure">
+        <img src="./assets/waiting.webp" width="810" height="828" alt="予約中の日本語画面に次の撮影時刻と撮影間隔が表示されている" loading="lazy">
+        <figcaption><strong>次の撮影</strong>に予定時刻が表示されたら、予約の待機中です。</figcaption>
+      </figure>
+    </section>
+
+    <section class="remote-shutter wrap" id="remote-shutter" aria-labelledby="remote-shutter-title">
+      <div class="remote-shutter-copy">
+        <p class="eyebrow"><span class="indicator"></span> 遠隔撮影</p>
+        <h2 id="remote-shutter-title"><span>離れた場所から、</span><br><span>今の様子を撮る。</span></h2>
+        <p>別のスマホやパソコンのブラウザから写真・動画を撮影できます。撮影側のAndroidでGoogle Driveを連携し、カメラを設定してから<strong>遠隔撮影を待機</strong>を押します。</p>
+        <p>両方の端末をインターネットに接続します。操作側のブラウザで同じGoogleアカウントにログインして<strong lang="en">Capture now</strong>を押し、転送が終わったファイルをDriveで開きます。</p>
+        <a class="button primary remote-shutter-cta" href="https://ichitap-schedulecam.web.app/remote/">遠隔撮影ページを開く（英語） <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="remote-shutter-flow">
+        <p>例 · 3Dプリントの仕上がりを確認</p>
+        <div class="remote-shutter-devices">
+          <div class="remote-shutter-device from-browser">
+            <span class="remote-device-icon remote-browser-icon" aria-hidden="true"></span>
+            <span>別端末のブラウザ</span>
+            <strong lang="en">Capture now</strong>
+            <p>プリントの完了を聞いたら、ブラウザから撮影を指示します。</p>
+          </div>
+          <span class="remote-shutter-arrow" aria-hidden="true">→</span>
+          <div class="remote-shutter-device">
+            <span class="remote-device-icon remote-phone-icon" aria-hidden="true"></span>
+            <span>作業場のAndroid</span>
+            <strong>遠隔撮影の待機中</strong>
+            <p>スマホが設定したカメラで撮影します。</p>
+          </div>
+        </div>
+        <figcaption>写真がアップロードされたら、Driveで仕上がりを確認します。</figcaption>
+      </figure>
+    </section>
+
+    <section class="process wrap" id="how" aria-labelledby="how-title">
+      <div class="process-copy">
+        <p class="eyebrow"><span class="indicator"></span> 予約撮影・インターバル撮影</p>
+        <h2 id="how-title"><span>撮りたい時間を</span><br><span>先に決めておく。</span></h2>
+        <ol class="steps" role="list">
+          <li><span class="step-number" aria-hidden="true">1</span><h3>単発で日時を指定</h3><p>撮影日時を最大30件指定できます。午前・昼・夕方の写真を撮ったり、決めた時刻から動画を録画したりできます。</p></li>
+          <li><span class="step-number" aria-hidden="true">2</span><h3>同じ間隔で繰り返す</h3><p>開始・終了日時と間隔を指定します。スマホを固定して、同じ構図の写真や短い動画を繰り返し撮影できます。</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>カメラと撮影形式を選ぶ</h3><p>端末で使えるレンズ・ズーム・解像度を選びます。動画は1〜10分の長さと、音声の有無を指定できます。</p></li>
+        </ol>
+        <p class="hint">このデモで予約方法、カメラ、保存先を選び、<strong>撮影を予約</strong>を押すと、設定内容と次の撮影時刻を確認できます。</p>
+        <p class="ja-guide-link"><a href="./interval-camera/">インターバル撮影と時刻指定の手順 →</a></p>
+      </div>
+      <figure class="product" id="try-demo" tabindex="-1">
+        <div class="product-background">
+          <div class="phone" id="schedule-demo-fallback">
+            <img src="./assets/schedule.webp" width="540" height="1140" alt="写真・動画、日時、撮影間隔を選べる日本語の予約画面" loading="lazy">
+          </div>
+          <div class="demo-phone" id="schedule-demo" hidden>
+            <div class="demo-screen">
+              <header class="demo-header">
+                <strong>ScheduleCam</strong>
+                <button type="button" class="demo-reset" id="demo-reset">初期化</button>
+              </header>
+              <div class="demo-tab">予約の操作デモ</div>
+              <form class="demo-form" id="demo-form" aria-label="ScheduleCamの予約操作デモ" novalidate>
+                <div class="demo-options" id="demo-draft">
+                  <fieldset class="demo-fieldset">
+                    <legend>予約方法</legend>
+                    <div class="demo-segments">
+                      <label><input type="radio" name="mode" value="once"><span>単発</span></label>
+                      <label><input type="radio" name="mode" value="repeat" checked><span>繰り返し</span></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset">
+                    <legend>撮影の種類</legend>
+                    <div class="demo-segments">
+                      <label><input type="radio" name="kind" value="photo" checked><span>写真</span></label>
+                      <label><input type="radio" name="kind" value="video"><span>動画</span></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset demo-video" id="demo-video" hidden>
+                    <legend class="demo-sr-only">動画の設定</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>動画の長さ</span>
+                        <select name="duration">
+                          <option value="1">1分</option>
+                          <option value="2">2分</option>
+                          <option value="3">3分</option>
+                          <option value="4">4分</option>
+                          <option value="5">5分</option>
+                          <option value="6">6分</option>
+                          <option value="7">7分</option>
+                          <option value="8">8分</option>
+                          <option value="9">9分</option>
+                          <option value="10">10分</option>
+                        </select>
+                      </label>
+                      <label class="demo-row"><span>音声</span>
+                        <select name="audio">
+                          <option value="off">なし</option>
+                          <option value="on">あり</option>
+                        </select>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset" id="demo-repeat">
+                    <legend>撮影日時</legend>
+                    <div class="demo-card">
+                      <label class="demo-row demo-row-stacked"><span>開始日時</span><input name="start" type="datetime-local"></label>
+                      <label class="demo-row demo-row-stacked"><span>終了日時</span><input name="end" type="datetime-local"></label>
+                      <label class="demo-row"><span>間隔（分）</span><input name="interval" type="number" min="1" step="1" value="10"></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset" id="demo-once" hidden>
+                    <legend>撮影日時</legend>
+                    <div class="demo-card" id="demo-times"></div>
+                    <button class="demo-add" id="demo-add" type="button">日時を追加</button>
+                  </fieldset>
+                  <template id="demo-time-row">
+                    <div class="demo-one-time">
+                      <div class="demo-time-heading">
+                        <label></label><button type="button" class="demo-remove">削除</button>
+                      </div>
+                      <input type="datetime-local">
+                    </div>
+                  </template>
+                  <fieldset class="demo-fieldset">
+                    <legend>カメラ設定</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>カメラ</span>
+                        <select name="lens"><option value="rear">背面・標準</option><option value="front">前面</option></select>
+                      </label>
+                      <label class="demo-row"><span>ズーム</span><select name="zoom"></select></label>
+                      <label class="demo-row"><span>解像度</span><select name="resolution"></select></label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-fieldset">
+                    <legend>保存先</legend>
+                    <div class="demo-card">
+                      <label class="demo-row"><span>保存先</span>
+                        <select name="destination">
+                          <option>端末</option>
+                          <option>端末とDrive</option>
+                          <option>Driveのみ</option>
+                        </select>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <section class="demo-status" id="demo-status" aria-labelledby="demo-next" hidden>
+                  <h3 id="demo-next" tabindex="-1">次の撮影</h3>
+                  <p class="demo-next-time" id="demo-next-time"></p>
+                  <dl class="demo-summary" id="demo-summary"></dl>
+                </section>
+                <div class="demo-actions">
+                  <p id="demo-message" class="demo-message" role="status"></p>
+                  <button class="demo-submit" id="demo-submit" type="submit">撮影を予約</button>
+                  <button class="demo-stop" id="demo-stop" type="button" hidden>予約を停止</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <figcaption id="demo-caption">ScheduleCamの予約画面</figcaption>
+      </figure>
+    </section>
+
+    <section class="drive-section wrap" id="drive" aria-labelledby="drive-title">
+      <div class="drive-intro">
+        <p class="eyebrow"><span class="indicator"></span> 自動アップロード</p>
+        <h2 id="drive-title"><span>Google Driveに</span><br><span>自動保存。</span></h2>
+        <p>Googleアカウントを連携すると、新しい写真や動画が自分のGoogle Driveに自動でアップロードされます。同じアカウントでScheduleCamフォルダを開けば、別端末からも確認できます。</p>
+        <figure class="drive-result">
+          <div class="drive-result-file">
+            <img src="../assets/strawberry-growth.webp" width="960" height="640" alt="" loading="lazy">
+            <div><strong>ScheduleCamフォルダ</strong><span>Google Driveの写真</span></div>
+            <span class="drive-result-check" aria-hidden="true">✓</span>
+          </div>
+          <figcaption>アップロードされた写真の表示例</figcaption>
+        </figure>
+      </div>
+      <div class="drive-choices">
+        <article class="drive-choice drive-only">
+          <span class="drive-icon" aria-hidden="true">↑</span>
+          <div><h3>Driveのみ</h3><p>Driveでファイルを確認できた後に、スマホの原本を削除して空き容量を確保します。</p></div>
+        </article>
+        <article class="drive-choice">
+          <span class="drive-icon" aria-hidden="true">+</span>
+          <div><h3>端末とDrive</h3><p>スマホとGoogle Driveの両方に撮影結果を残します。</p></div>
+        </article>
+        <p class="drive-note">転送待ちのファイルはスマホに保持し、再接続後にアップロードを再試行します。</p>
       </div>
     </section>
-    <section class="jp-section" id="remote">
-      <h2><span>別の端末から</span> <span>ブラウザで遠隔撮影</span></h2>
-      <p>撮影するAndroidでGoogle Driveを連携し、「遠隔撮影を待機」を押します。別のスマホやパソコンのブラウザで同じGoogleアカウントにログインし、写真または動画の撮影を指示します。両方の端末にインターネット接続が必要です。</p>
-      <p><a href="https://ichitap-schedulecam.web.app/remote/">遠隔撮影ページを開く（英語） ↗</a></p>
-      <h3><span>端末内保存と</span> <span>Google Driveへの自動保存</span></h3><p>端末内だけに保存する予約撮影は、Googleアカウントやインターネット接続なしで使えます。Driveを連携すると、撮影した写真・動画を自分のGoogle Driveに自動アップロードでき、別の端末から確認できます。</p>
+
+    <section class="ja-screenshots wrap" id="screenshots" aria-labelledby="screenshots-title">
+      <h2 id="screenshots-title">アプリの画面</h2>
+      <div class="ja-screenshot-grid">
+        <figure class="screen-figure">
+          <img src="./assets/schedule.webp" width="540" height="1140" alt="日本語の予約画面で写真と繰り返し間隔を選択" loading="lazy">
+          <figcaption><strong>撮影を予約</strong><br>撮影日時、種類、撮影間隔を設定します。</figcaption>
+        </figure>
+        <figure class="screen-figure">
+          <img src="./assets/remote.webp" width="540" height="1200" alt="日本語の予約画面の上部に遠隔撮影の待機中と表示されている" loading="lazy">
+          <figcaption><strong>遠隔撮影の待機</strong><br>別端末のブラウザからの撮影指示を待ちます。</figcaption>
+        </figure>
+        <figure class="screen-figure">
+          <img src="./assets/capture.webp" width="540" height="1140" alt="日本語の撮影結果から写真を開き、コピーを保存できる画面" loading="lazy">
+          <figcaption><strong>撮影結果を見る</strong><br>撮った写真を開き、必要に応じてファイルを書き出せます。</figcaption>
+        </figure>
+      </div>
     </section>
-    <section class="jp-section" id="availability">
-      <h2>対応端末と利用料金</h2>
-      <p>Android 14以降のカメラ搭載端末に対応。アプリは日本語で使えます。アプリ内で7日間試用でき、試用後も撮影機能を使うには月額プランが必要です。</p><a class="button primary" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam&amp;hl=ja&amp;gl=JP">Google Play で入手 <span aria-hidden="true">↗</span></a>
+
+    <section class="comparison wrap" id="compare" aria-labelledby="compare-title">
+      <div class="comparison-copy">
+        <p class="eyebrow"><span class="indicator"></span> ネットワークカメラとの比較</p>
+        <h2 id="compare-title"><span>撮った写真で、</span><span>細部まで確認。</span></h2>
+        <p>手元のAndroidでレンズ・ズーム・解像度を選べます。高解像度の写真なら、植物の葉、計器の目盛り、造形物の表面などを拡大して確認しやすくなります。</p>
+        <div class="comparison-uses">
+          <article><h3>ScheduleCam</h3><p>必要な時間だけ予約撮影し、ファイルをAndroidの端末内に保存できます。端末内だけに保存する予約撮影は、Googleアカウントやインターネット接続なしで使えます。</p></article>
+          <article><h3>ネットワークカメラ</h3><p>リアルタイム視聴、動体検知通知、赤外線による夜間撮影には、対応するネットワークカメラが適しています。対応機能は機種によって異なります。</p></article>
+        </div>
+      </div>
+      <figure class="resolution-example">
+        <figcaption>写真と動画1コマの画素数の例</figcaption>
+        <dl class="resolution-values">
+          <div>
+            <dt>スマホの静止画</dt>
+            <dd><div class="resolution-meta"><strong>8.0 MP</strong><span>3,264 × 2,448</span></div>
+              <div class="resolution-bar phone-still" aria-hidden="true"><span></span></div>
+            </dd>
+          </div>
+          <div>
+            <dt>ネットワークカメラの1080p動画（1コマ）</dt>
+            <dd><div class="resolution-meta"><strong>2.1 MP</strong><span>1,920 × 1,080</span></div>
+              <div class="resolution-bar network-video" aria-hidden="true"><span></span></div>
+            </dd>
+          </div>
+        </dl>
+        <p>800万画素の写真は、1080pの動画1コマに比べ画素数が約<strong>3.9倍</strong>です。解像度や画質は、カメラ・レンズ・光量・設定に左右されます。</p>
+      </figure>
+    </section>
+
+    <section class="ideas" id="ideas" aria-labelledby="ideas-title">
+      <div class="wrap">
+        <p class="eyebrow"><span class="indicator"></span> 活用例</p>
+        <h2 id="ideas-title"><span>見たい瞬間を</span><br><span>あとから確かめる。</span></h2>
+
+        <section class="case-group" aria-labelledby="home-cases">
+          <h3 id="home-cases">自宅で</h3>
+          <div class="case-features">
+            <article>
+              <img src="../assets/pet-at-home.webp" width="960" height="640" alt="日が差す窓辺で休む犬" loading="lazy">
+              <div class="case-feature-copy">
+                <p class="mode">写真の予約</p>
+                <h4><span>昼食後の愛犬の</span><wbr><span>様子を見る</span></h4>
+                <p>外出中の正午に自動給餌器が動くなら、愛犬がいつも休む場所を12時10分と12時30分に撮影。帰宅後に、食事後の過ごし方を日ごとに比べられます。</p>
+              </div>
+            </article>
+            <article>
+              <img src="../assets/vacant-room.webp" width="960" height="640" alt="大きな窓から床に差す日差し" loading="lazy">
+              <div class="case-feature-copy">
+                <p class="mode">写真の予約</p>
+                <h4><span>日差しが届く場所を</span><wbr><span>調べる</span></h4>
+                <p>机を置きたい壁にスマホを向け、午前9時・正午・午後3時に撮影。外出している間に、どの時間帯に日差しが届くか分かります。</p>
+              </div>
+            </article>
+          </div>
+          <div class="case-grid">
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>水槽の照明タイマーを</span><wbr><span>確認</span></h4>
+              <p>水槽の照明を午後1時に点灯する設定なら、その前後の12時55分と1時10分を予約。2枚を比べて、照明が切り替わったか確かめます。</p>
+              <p class="case-follow-up">外出先でタイマーを変更したら、新しい点灯時刻のあとに遠隔撮影で確かめます。</p>
+            </article>
+            <article>
+              <p class="mode">毎日の写真</p>
+              <h4><span>自動水やりの</span><wbr><span>あとを確認</span></h4>
+              <p>旅行前に植物の受け皿へカメラを向けます。毎朝の水やりから30分後に同じ場所を撮り、受け皿の水の量を日ごとに比べます。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-group" aria-labelledby="farm-cases">
+          <h3 id="farm-cases">農園や屋外で</h3>
+          <article class="case-spotlight">
+            <img src="../assets/strawberry-growth.webp" width="960" height="640" alt="温室の花と実がついたイチゴ" loading="lazy">
+            <div class="case-feature-copy">
+              <p class="mode">毎日の写真</p>
+              <h4><span>毎朝、同じイチゴの</span><wbr><span>色を比べる</span></h4>
+              <p>朝は別の農園で働く日でも、収穫前の午前8時に同じ房を撮影。日ごとの色づきを比べ、収穫に入る列を決める参考にします。</p>
+            </div>
+          </article>
+          <div class="case-grid">
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>かん水中の</span><wbr><span>流量計を撮る</span></h4>
+              <p>別の区画で作業する間、配管末端の流量計を午前7時55分と8時10分に撮影。かん水開始の前と10分後を見比べます。</p>
+              <p class="case-follow-up">ポンプの開始が遅れ、開始通知を受け取ったら、その10分後に遠隔撮影します。</p>
+            </article>
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>温室の換気窓の</span><wbr><span>開閉を確認</span></h4>
+              <p>温室が無人になる時間帯に、開く予定の10分後と閉じる予定の10分後を撮影。換気窓が所定の位置まで動いたか確認します。</p>
+            </article>
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>補水前後の</span><wbr><span>タンク水位を比べる</span></h4>
+              <p>夜間に無人になる場所で、照明のある水位計にカメラを向けます。午前2時から2時30分までの補水の前後を撮り、水位の差を確認します。</p>
+            </article>
+            <article>
+              <p class="mode">動画の予約</p>
+              <h4><span>遮光幕が最後まで</span><wbr><span>開くか見る</span></h4>
+              <p>正午に遮光幕のタイマーが動くなら、11時59分から2分間を録画。幕が端まで動いたか、途中で停止したかを見返せます。</p>
+            </article>
+          </div>
+          <p class="case-note">屋外では使用端末の防水性能と動作条件を確認し、雨・水しぶき・結露を避けられる場所に設置してください。 <a href="https://support.google.com/pixelphone/answer/7533279?hl=ja">Googleの防水性能の案内</a></p>
+        </section>
+
+        <section class="case-group" aria-labelledby="project-cases">
+          <h3 id="project-cases">作業場や職場で</h3>
+          <article class="case-spotlight">
+            <img src="../assets/print-progress.webp" width="960" height="640" alt="作業場の3Dプリンターで造形途中の花瓶" loading="lazy">
+            <div class="case-feature-copy">
+              <p class="mode">繰り返し写真</p>
+              <h4><span>3Dプリントの</span><wbr><span>経過を見比べる</span></h4>
+              <p>外出前にプリントを開始し、開始から10分間隔で写真を予約します。別の回の同じ経過時刻と見比べ、角が浮き始めた時点を探します。</p>
+              <p class="case-follow-up">外出中にプリンターから完了通知が届いたら、遠隔撮影で仕上がりを確認できます。</p>
+            </div>
+          </article>
+          <div class="case-grid">
+            <article>
+              <p class="mode">繰り返し写真</p>
+              <h4><span>硬化中の塗膜を</span><wbr><span>同じ時刻で比べる</span></h4>
+              <p>夜間の硬化試験で、開始時とその後30分ごとに撮影。試料ごとに同じ経過時刻を並べ、どの塗膜に先に泡が出たか確かめます。</p>
+            </article>
+            <article>
+              <p class="mode">毎日の写真</p>
+              <h4><span>次の作業班が入る前に</span><wbr><span>進捗を記録</span></h4>
+              <p>配線班の作業後、午後4時45分に目印を付けた壁を撮影。翌朝に次の班が入る前に、どこまで終わったか確認できます。</p>
+            </article>
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>閉店後の照明の</span><wbr><span>消灯を確認</span></h4>
+              <p>午後7時に照明が消える店舗で、6時55分と7時10分に撮影を予約。タイマーが動く前後を見比べ、どの照明が残ったか確認します。</p>
+            </article>
+            <article>
+              <p class="mode">写真の予約</p>
+              <h4><span>会場ごとの入場列を</span><wbr><span>見比べる</span></h4>
+              <p>撮影が認められた会場で、開場予定の5分前と10分後に入場列の範囲を撮影。各会場で列がどこまで伸びたかを比べ、次回の受付配置の参考にします。</p>
+              <p class="case-follow-up">開場が遅れたら、実際に開場してから10分後に遠隔撮影します。</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow"><span class="indicator"></span> 使い始める前に</p>
+        <h2 id="faq-title">よくある質問</h2>
+        <figure class="screen-figure faq-figure">
+          <img src="./assets/stop.webp" width="810" height="318" alt="日本語の予約画面の下部にある予約を停止ボタン" loading="lazy">
+          <figcaption>アプリの予約画面から停止できます。</figcaption>
+        </figure>
+      </div>
+      <div class="faq-list">
+        <details id="timing" open>
+          <summary>写真の撮影間隔は最短何分ですか？</summary>
+          <p>繰り返しの写真撮影は1分単位で最短1分、初期値は10分です。バッテリーセーバーやDozeの作動中は、15分未満の間隔を15分に調整します。撮影時刻は端末や省電力設定の影響を受けます。</p>
+        </details>
+        <details>
+          <summary>音声付き動画を予約するには？</summary>
+          <p><strong>動画</strong>を選び、音声を「あり」にして、マイクへのアクセスを許可します。繰り返しの場合は、録画の長さより長い間隔を設定します。</p>
+        </details>
+        <details>
+          <summary>撮影結果をスマホだけに保存できますか？</summary>
+          <p>保存先を<strong>端末</strong>にすると、予約撮影の写真・動画をオフラインでも保存できます。Drive連携時は、接続が戻ると転送を再試行します。ブラウザからの遠隔撮影にはDrive連携とインターネット接続が必要です。</p>
+        </details>
+        <details>
+          <summary>撮影結果を確認・書き出しするには？</summary>
+          <p><strong>撮影結果</strong>から写真を開いたり、動画を再生したりできます。書き出すときは<strong>コピーを保存</strong>を押してください。Driveに転送したファイルは、ScheduleCamフォルダで確認できます。</p>
+        </details>
+        <details>
+          <summary>予約を止めるには？</summary>
+          <p>アプリで<strong>予約を停止</strong>を押すか、待機中の通知から停止します。予約の通知を消した場合も予約は停止します。端末を再起動したら、アプリを開いて再予約してください。</p>
+        </details>
+        <details>
+          <summary>カメラへのアクセスが制限されたら？</summary>
+          <p>カメラが使えない回は撮影を見送り、アプリまたは通知に理由を表示します。繰り返し予約が有効なら、次の撮影予定まで待機します。</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="availability wrap" id="availability" aria-labelledby="availability-title">
+      <div>
+        <p class="eyebrow"><span class="indicator"></span> 対応端末とプラン</p>
+        <h2 id="availability-title"><span>Android 14以降に対応</span></h2>
+        <p>カメラを搭載したAndroid 14以降の端末に対応。アプリの表示言語は端末に合わせるか、アプリ内で選べます。</p>
+        <ul class="languages" aria-label="対応する表示言語">
+          <li>English</li><li lang="ja">日本語</li><li lang="ko">한국어</li><li lang="zh-Hant">繁體中文</li><li lang="de">Deutsch</li><li lang="pt-BR">Português (Brasil)</li><li lang="es">Español</li>
+        </ul>
+      </div>
+      <div class="availability-options">
+        <div class="store">
+          <div class="store-label">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div>
+              <strong>Google Playで配信中</strong>
+              <p>アプリ内で7日間試用できます。試用後も撮影機能を使うには月額プランが必要です。</p>
+              <a class="source-link" href="https://play.google.com/store/apps/details?id=com.ichitap.schedulecam&amp;hl=ja&amp;gl=JP">Google Play で入手 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <p class="ios-note">iOS版の提供予定はありません。iOSでは、画面オフやロック中にアプリがバックグラウンドでカメラを起動して予約撮影を開始できません。</p>
+          <a class="source-link" href="https://developer.apple.com/documentation/avfoundation/avcapturesession/interruptionreason/videodevicenotavailableinbackground">Appleのカメラ仕様（英語） <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="jp-footer wrap">
-    <a class="brand" href="https://support.ichitap.com/ScheduleCam/overview/ja/">ScheduleCam</a>
-    <nav aria-label="関連情報">
-      <a href="https://support.ichitap.com/ScheduleCam/overview/" lang="en" hreflang="en">English</a>
-      <a href="https://support.ichitap.com/ScheduleCam/privacy/">プライバシーポリシー <span lang="en">(EN)</span></a>
+  <footer class="site-footer wrap">
+    <a class="brand" href="./"><span class="brand-icon" aria-hidden="true"><span class="camera-icon"></span></span>ScheduleCam</a>
+    <nav aria-label="サポートとプライバシー">
+      <a href="../" lang="en" hreflang="en">English</a>
+      <a href="../../privacy/">プライバシーポリシー（英語）</a>
+      <a href="../../privacy/#contact">お問い合わせ（英語）</a>
     </nav>
   </footer>
 </body>
