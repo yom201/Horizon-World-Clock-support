@@ -24,7 +24,7 @@
     <header class="intro">
       <a class="brand" href="../overview/">ScheduleCam</a>
       <h1>Privacy Policy</h1>
-      <p class="updated"><time datetime="2026-11-16">November 16, 2026</time></p>
+      <p class="updated"><time datetime="2026-11-19">November 19, 2026</time></p>
       <p>ScheduleCam is an Android app by ICHITAP that schedules captures and can save them to the Google Drive account you connect. This policy explains how the app handles captures, information from Google, and remote capture requests.</p>
     </header>
     <section>
@@ -40,7 +40,7 @@
     </section>
     <section>
       <h2>Gmail notifications</h2>
-      <p>If you enable Gmail notifications, ScheduleCam uses Gmail's send-only permission to email remote capture results from and to your connected Google Account. It attaches photos that fit and sends links to videos and larger photos after verifying their upload to Drive. The links keep the file's existing Drive access permissions.</p>
+      <p>Gmail notifications are planned for a future Google Play release. In versions where you can enable this feature, ScheduleCam uses Gmail's send-only permission to email remote capture results from and to your connected Google Account. It attaches photos that fit and sends links to videos and larger photos after verifying their upload to Drive. The links keep the file's existing Drive access permissions.</p>
       <p>The Android device delivers these messages directly to Gmail. The device keeps pending delivery information and a temporary copy of an attached photo to complete the send. You can turn off Gmail notifications in the app and manage messages in Gmail.</p>
     </section>
     <section>
@@ -54,6 +54,18 @@
     <section id="website-ad-measurement">
       <h2>Website ad measurement</h2>
       <p>The Japanese ScheduleCam landing page uses a Google Ads tag when you allow ad measurement. Google may use cookies and ad-click information to measure whether an ad visit leads to a click on a Google Play link. The tag is configured with ad personalization turned off. Change your choice under <strong>Ad measurement settings</strong> at the bottom of the Japanese landing page. See <a href="https://policies.google.com/technologies/ads">how Google uses advertising data</a>.</p>
+    </section>
+
+    <section id="google-data-sharing">
+      <h2>Who receives Google user data</h2>
+      <p>Google receives account information when you sign in. The Android app sends captures and their file metadata directly to your authorized Google Drive. If you enable Gmail notifications in a version that offers them, the app sends the message, attached photo or Drive link directly to Google Gmail. The sender and recipient are the same connected account.</p>
+      <p>ICHITAP uses Google Cloud Functions, Cloud Firestore, and Firebase Cloud Messaging to operate remote capture. The relay verifies your Google sign-in and processes your Google Account identifier, Android device registration, capture request, and result status. Firebase Cloud Messaging delivers the request to the registered camera phone. The relay does not receive captures or Google Drive or Gmail access tokens.</p>
+      <p>ScheduleCam uses these transfers for the features you enable. ICHITAP does not sell Google user data, disclose it for advertising, or share it with unrelated third parties.</p>
+    </section>
+    <section id="google-data-protection">
+      <h2>How we protect Google user data</h2>
+      <p>The app connects to Google APIs and the remote capture relay over encrypted HTTPS. Google Drive and Gmail access tokens are obtained through Google Play services when needed and are not stored by ScheduleCam. The app stores its local account settings, pending uploads and captures in private Android app storage. Android backup is disabled for the app.</p>
+      <p>Cloud Firestore encrypts relay records at rest. The relay verifies Google ID tokens and checks the account that owns each capture request before returning its status. It verifies the registered camera phone before accepting result updates. Browser and Android clients cannot read or write the relay's Firestore records directly.</p>
     </section>
 
     <section>
