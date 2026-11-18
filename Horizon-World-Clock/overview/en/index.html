@@ -77,7 +77,7 @@
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c15">
-  <meta name="description" content="See the local time and daylight in as many cities as you like. Add iPhone Home Screen widgets that follow each city’s sunrise and sunset.">
+  <meta name="description" content="An iPhone world clock that follows each city’s sunrise and sunset. Preview five weather patterns and see how current temperature appears on the clock face.">
   <title>Horizon World Clock — Real-time sunrise and sunset animation</title>
   <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
@@ -86,13 +86,14 @@
   <link rel="icon" type="image/webp" href="../assets/icon.webp">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Horizon World Clock — Real-time sunrise and sunset animation">
-  <meta property="og:description" content="See the local time and daylight in as many cities as you like. Add iPhone Home Screen widgets that follow each city’s sunrise and sunset.">
+  <meta property="og:description" content="An iPhone world clock that follows each city’s sunrise and sunset. Preview five weather patterns and see how current temperature appears on the clock face.">
   <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../styles.css?v=sunrise-animation">
+  <link rel="stylesheet" href="../styles.css?v=weather-20261119">
   <script src="../clock.js" defer></script>
+  <script src="../weather.js?v=20261119" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -123,7 +124,7 @@
           <p class="hero-intro"><strong>Subscribe on iPhone and get the Mac app at no extra charge.</strong><br>Planned for the Mac launch with the same Apple Account.</p>
           <div class="actions">
             <a class="button button-primary" href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">Download on the App Store <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#daylight">Explore the daylight demo <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#weather">See the weather and temperature demo</a>
           </div>
         </div>
         <div class="live-panel" aria-label="Current time in four cities">
@@ -152,6 +153,79 @@
           <noscript><p>Enable JavaScript to see the live clocks.</p></noscript>
         </div>
       </div>
+    </section>
+
+    <section class="weather shell" id="weather" aria-labelledby="weather-title">
+      <div class="section-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span>Weather on iPhone</p>
+        <h2 id="weather-title">Weather &amp; temperature at a glance.</h2>
+        <p>In the weather-enabled iPhone version, see the current conditions and temperature for your chosen cities alongside the time in the app and on your Home Screen widgets.</p>
+      </div>
+      <div class="weather-showcase">
+        <div class="weather-showcase-head">
+          <div>
+            <h3>See the weather move</h3>
+            <p>The sky on each clock face changes with the city’s current conditions.</p>
+          </div>
+          <button class="weather-motion" type="button" data-play="Play animations" data-pause="Pause animations" hidden>Play animations</button>
+        </div>
+        <ul class="weather-cards">
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="../assets/weather/clear.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="../assets/weather/clear-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>Clear</strong><small><span>An open sky with the sun or moon.</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="../assets/weather/cloud.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="../assets/weather/cloud-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>Cloudy</strong><small><span>Light clouds drift across the dial.</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="../assets/weather/rain.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="../assets/weather/rain-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>Rain</strong><small><span>Fine drops fall in the same direction.</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="../assets/weather/snow.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="../assets/weather/snow-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>Snow</strong><small><span>Flakes sway from side to side as they fall.</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="../assets/weather/storm.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="../assets/weather/storm-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>Storm</strong><small><span>Rain falls faster and at a sharper angle.</span></small></div>
+          </li>
+        </ul>
+        <p class="weather-sample">Rendered using the app’s clock face with sample conditions.</p>
+      </div>
+      <div class="weather-guide">
+        <div>
+          <h3>Read the temperature on the dial</h3>
+          <p>The city’s <strong>current temperature</strong> appears near the bottom of its clock face. Choose Celsius or Fahrenheit.</p>
+          <div class="weather-unit-example"><span>Celsius 18°C</span><span>Fahrenheit 64°F</span></div>
+        </div>
+        <div>
+          <h3>Turn on what you want to see</h3>
+          <p>Weather effects and temperature are off by default.</p>
+          <ol>
+            <li>Open <strong>Edit cities</strong> in the app and find <strong>Weather and temperature</strong>.</li>
+            <li>Switch on <strong>Weather effects</strong>, <strong>Show temperature</strong>, or both.</li>
+            <li>Choose a temperature unit if you need one, then tap <strong>Save</strong>. Your choices apply to the app and all its widgets.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="weather-source">Data from <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather</a>. The app requests weather about every 30 minutes and shows the last reading between updates. iOS controls widget refresh times.</p>
+      <p class="weather-availability"><a href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">Check availability on the App Store</a></p>
     </section>
 
     <section class="daylight shell" id="daylight" aria-labelledby="daylight-title">

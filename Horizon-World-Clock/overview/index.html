@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c15">
-  <meta name="description" content="好きな街を、好きな数だけ。日の出・日の入りに連動するiPhoneの世界時計。ウィジェットを追加して、さまざまな都市の時刻と昼夜をひと目で。">
+  <meta name="description" content="日の出・日の入りに連動するiPhoneの世界時計。文字盤で見る天気の演出5種と現在の気温をデモで確認できます。">
   <title>Horizon World Clock｜リアルタイムの日の出・日の入りアニメーション付き世界時計</title>
   <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
@@ -13,13 +13,14 @@
   <link rel="icon" type="image/webp" href="assets/icon.webp">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Horizon World Clock｜リアルタイムの日の出・日の入りアニメーション付き世界時計">
-  <meta property="og:description" content="好きな街を、好きな数だけ。日の出・日の入りに連動するiPhoneの世界時計。ウィジェットを追加して、さまざまな都市の時刻と昼夜をひと目で。">
+  <meta property="og:description" content="日の出・日の入りに連動するiPhoneの世界時計。文字盤で見る天気の演出5種と現在の気温をデモで確認できます。">
   <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/">
   <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css?v=heading-wrap">
+  <link rel="stylesheet" href="styles.css?v=weather-20261119">
   <script src="clock.js" defer></script>
+  <script src="weather.js?v=20261119" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -50,7 +51,7 @@
           <p class="hero-intro"><strong>iPhoneの月額登録で、<wbr><span style="white-space: nowrap">Mac版も追加料金なし。</span></strong><br>Mac版の公開時から、同じApple Accountで使える予定です。</p>
           <div class="actions">
             <a class="button button-primary" href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで入手 <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#daylight">昼夜のデモを見る <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#weather">天気と気温のデモを見る</a>
           </div>
         </div>
         <div class="live-panel" aria-label="4都市の現在時刻">
@@ -79,6 +80,79 @@
           <noscript><p>世界時刻の表示にはJavaScriptが必要です。</p></noscript>
         </div>
       </div>
+    </section>
+
+    <section class="weather shell" id="weather" aria-labelledby="weather-title">
+      <div class="section-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span>iPhoneの天気機能</p>
+        <h2 id="weather-title"><span>街の天気も、</span><span>気温もひと目で。</span></h2>
+        <p><span class="weather-phrase">天気に対応したiPhone版では、</span><span class="weather-phrase">選んだ都市の今の天気と気温を、</span><span class="weather-phrase">時刻と一緒に見られます。</span><span class="weather-phrase">アプリとホーム画面の</span><span class="weather-phrase">ウィジェットで確認できます。</span></p>
+      </div>
+      <div class="weather-showcase">
+        <div class="weather-showcase-head">
+          <div>
+            <h3>天気は、文字盤の動きで</h3>
+            <p>各都市の天気に合わせて、文字盤の空が変わります。</p>
+          </div>
+          <button class="weather-motion" type="button" data-play="アニメーションを再生" data-pause="アニメーションを一時停止" hidden>アニメーションを再生</button>
+        </div>
+        <ul class="weather-cards">
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="assets/weather/clear.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="assets/weather/clear-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>晴れ</strong><small><span>太陽や月が</span><span>見える空。</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="assets/weather/cloud.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="assets/weather/cloud-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>曇り</strong><small><span>空に薄い雲が</span><span>かかります。</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="assets/weather/rain.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="assets/weather/rain-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>雨</strong><small><span>細い雨粒が</span><span>同じ向きに</span><span>流れます。</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="assets/weather/snow.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="assets/weather/snow-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>雪</strong><small><span>雪が横に</span><span>揺れながら</span><span>降ります。</span></small></div>
+          </li>
+          <li class="weather-tile">
+            <div class="weather-face" aria-hidden="true">
+              <img src="assets/weather/storm.webp" alt="" width="224" height="224" loading="lazy">
+              <canvas width="160" height="160" data-weather-sprite="assets/weather/storm-motion.webp" hidden></canvas>
+            </div>
+            <div><strong>暴風雨</strong><small><span>雨がより速く、</span><span>斜めに降ります。</span></small></div>
+          </li>
+        </ul>
+        <p class="weather-sample"><span class="weather-phrase">アプリの描画を使ったサンプルです。</span><span class="weather-phrase">表示値はデモ用です。</span></p>
+      </div>
+      <div class="weather-guide">
+        <div>
+          <h3>気温は、文字盤の下に</h3>
+          <p><span class="weather-phrase">都市の<strong>現在の気温</strong>を、</span><span class="weather-phrase">文字盤の下側に表示します。</span><span class="weather-phrase">摂氏・華氏を選べます。</span></p>
+          <div class="weather-unit-example"><span>摂氏 18°C</span><span>華氏 64°F</span></div>
+        </div>
+        <div>
+          <h3>表示をオンにするには</h3>
+          <p>初期設定では両方オフです。</p>
+          <ol>
+            <li>アプリで<span class="weather-phrase"><strong>「都市を編集」</strong>をタップ。</span><span class="weather-phrase"><strong>「天気と気温」</strong>へ進みます。</span></li>
+            <li><strong>「天気の演出」</strong>と<strong>「気温を表示」</strong>を、見たいものだけオンにします。</li>
+            <li>必要に応じて気温の単位を選び、<strong>「保存」</strong>をタップ。アプリとすべてのウィジェットに反映されます。</li>
+          </ol>
+        </div>
+      </div>
+      <p class="weather-source">天気データは <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather</a> 提供。約30分を目安に取得し、更新までは前回の値を表示します。ウィジェットの反映時刻はiOSが管理します。</p>
+      <p class="weather-availability"><a href="https://apps.apple.com/jp/app/horizon-world-clock/id6823687302">App Storeで天気対応版の配信状況を確認</a></p>
     </section>
 
     <section class="daylight shell" id="daylight" aria-labelledby="daylight-title">
