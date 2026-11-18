@@ -10,10 +10,10 @@
   <link rel="alternate" hreflang="en" href="https://support.ichitap.com/ScheduleCam/overview/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/ScheduleCam/overview/ja/">
   <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/ScheduleCam/overview/">
-  <link rel="stylesheet" href="./site.css?v=20261119-visit-measurement">
+  <link rel="stylesheet" href="./site.css?v=20261117-ads-measurement">
   <link rel="stylesheet" href="./demo.css">
   <script src="./demo.js" defer></script>
-  <script src="./visit-measurement.js?v=20261119" defer></script>
+  <script src="./ads-measurement.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -28,21 +28,11 @@
     </nav>
   </header>
   <section class="ads-measurement wrap" id="ads-measurement" aria-labelledby="ads-measurement-title" hidden>
-    <h2 id="ads-measurement-title" tabindex="-1">Measurement settings</h2>
-    <div class="measurement-options">
-      <label>
-        <input type="checkbox" id="allow-ad-measurement" aria-describedby="ad-measurement-explanation">
-        <span>Allow ad measurement<small id="ad-measurement-explanation">Google Ads measures clicks to Google Play.</small></span>
-      </label>
-      <label>
-        <input type="checkbox" id="allow-visit-measurement" aria-describedby="visit-measurement-explanation">
-        <span>Allow visit measurement<small id="visit-measurement-explanation">Google Analytics measures visits, including arrivals from ads.</small></span>
-      </label>
-    </div>
-    <p><a href="./../privacy/#website-ad-measurement">Measurement and privacy</a></p>
+    <h2 id="ads-measurement-title" tabindex="-1">Ad measurement</h2>
+    <p>Allow Google Ads to measure when you go from this page to Google Play. <a href="../privacy/#website-ad-measurement">Learn more</a></p>
     <div class="ads-measurement-actions">
-      <button type="button" data-measurement-choice="save">Save choices</button>
-      <button type="button" data-measurement-choice="decline">Decline both</button>
+      <button type="button" data-ads-consent="granted">Allow</button>
+      <button type="button" data-ads-consent="denied">Decline</button>
     </div>
   </section>
   <main id="main">
@@ -488,7 +478,7 @@
       <a href="./ja/" lang="ja" hreflang="ja">日本語</a>
       <a href="../privacy/">Privacy Policy</a>
       <a href="../privacy/#contact">Contact support</a>
-      <button class="ads-measurement-settings" id="ads-measurement-settings" type="button" aria-controls="ads-measurement" aria-expanded="false" hidden>Measurement settings</button>
+      <button class="ads-measurement-settings" id="ads-measurement-settings" type="button" aria-controls="ads-measurement" aria-expanded="false" hidden>Ad measurement settings</button>
     </nav>
   </footer>
 </body>

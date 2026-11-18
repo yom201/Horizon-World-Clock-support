@@ -276,10 +276,6 @@ p { margin: 0; }
 .ads-measurement h2:focus { outline: none; }
 .ads-measurement p { margin-top: 5px; color: var(--muted); font-size: .88rem; line-height: 1.55; }
 .ads-measurement p a { color: inherit; text-underline-offset: 3px; }
-.measurement-options { display: grid; gap: 7px; margin-top: 10px; }
-.measurement-options label { display: flex; align-items: flex-start; gap: 8px; font-size: .92rem; font-weight: 600; cursor: pointer; }
-.measurement-options input { flex: none; margin: .25em 0 0; accent-color: var(--green); }
-.measurement-options small { display: block; font-size: .88rem; font-weight: 400; color: var(--muted); }
 .ads-measurement-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .ads-measurement-actions button {
   min-height: 42px;
