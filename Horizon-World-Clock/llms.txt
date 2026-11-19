@@ -1,0 +1,23 @@
+# Horizon World Clock
+
+> ICHITAP’s iPhone world clock app and Home Screen widgets show local time and daylight for selected cities. The web demos let visitors compare four cities and preview what weather and temperature look like in the weather-enabled iPhone version.
+
+An iPhone widget shows four cities. The configurable widget lets you set a different group for each widget. iOS schedules Home Screen widget updates. The sun on the clock face represents progress between calculated local sunrise and sunset.
+
+## English
+
+- [World Clock app and online demo](https://support.ichitap.com/Horizon-World-Clock/overview/en/): Current times in Tokyo, London, New York and Los Angeles, and a date and time slider for the sunrise and sunset demo.
+- [iPhone world clock widget setup](https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/): Add a widget to the Home Screen and choose which cities to show.
+- [Weather and temperature demo](https://support.ichitap.com/Horizon-World-Clock/overview/en/#weather): Clear, cloudy, rain, snow and storm sample animations and the separate settings for weather and temperature.
+- [App Store](https://apps.apple.com/us/app/horizon-world-clock/id6823687302): Current app availability and iOS compatibility.
+
+## 日本語
+
+- [iPhoneの世界時計と時差のデモ](https://support.ichitap.com/Horizon-World-Clock/overview/): 4都市の現在時刻、日の出・日の入り、天気と気温のデモ。
+- [世界時計ウィジェットの設定手順](https://support.ichitap.com/Horizon-World-Clock/overview/iphone-world-clock-widget/): ホーム画面への追加と都市の選び方。
+- [天気と気温のデモ](https://support.ichitap.com/Horizon-World-Clock/overview/#weather): 天気の演出5種類と気温の表示・設定方法。
+- [App Store](https://apps.apple.com/jp/app/horizon-world-clock/id6823687302): 配信状況と対応OS。
+
+## Optional
+
+- [Support / サポート](https://support.ichitap.com/Horizon-World-Clock/): App usage and support in Japanese and English.

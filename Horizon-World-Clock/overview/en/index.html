@@ -77,23 +77,64 @@
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c15">
-  <meta name="description" content="An iPhone world clock that follows each city’s sunrise and sunset. Preview five weather patterns and see how current temperature appears on the clock face.">
-  <title>Horizon World Clock — Real-time sunrise and sunset animation</title>
+  <meta name="description" content="Compare world time in Tokyo, London, New York and Los Angeles. Add four-city world clock widgets to iPhone and explore sunrise, sunset and weather demos.">
+  <title>World Clock App for iPhone &amp; Widgets | Horizon World Clock</title>
   <link rel="canonical" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/">
   <link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <link rel="icon" type="image/webp" href="../assets/icon.webp">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Horizon World Clock — Real-time sunrise and sunset animation">
-  <meta property="og:description" content="An iPhone world clock that follows each city’s sunrise and sunset. Preview five weather patterns and see how current temperature appears on the clock face.">
+  <meta property="og:title" content="World Clock App for iPhone &amp; Widgets | Horizon World Clock">
+  <meta property="og:description" content="Compare world time in Tokyo, London, New York and Los Angeles. Add four-city world clock widgets to iPhone and explore sunrise, sunset and weather demos.">
   <meta property="og:url" content="https://support.ichitap.com/Horizon-World-Clock/overview/en/">
   <meta property="og:image" content="https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../styles.css?v=weather-20261119">
+  <link rel="stylesheet" href="../styles.css?v=search-20261119">
   <script src="../clock.js" defer></script>
   <script src="../weather.js?v=20261119" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://support.ichitap.com/Horizon-World-Clock/overview/en/#webpage",
+      "url": "https://support.ichitap.com/Horizon-World-Clock/overview/en/",
+      "name": "World Clock App for iPhone & Widgets | Horizon World Clock",
+      "description": "Compare world time in Tokyo, London, New York and Los Angeles. Add four-city world clock widgets to iPhone and explore sunrise, sunset and weather demos.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ICHITAP"
+      },
+      "mainEntity": {
+        "@id": "https://support.ichitap.com/Horizon-World-Clock/#app"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://support.ichitap.com/Horizon-World-Clock/#app",
+      "name": "Horizon World Clock",
+      "url": "https://support.ichitap.com/Horizon-World-Clock/overview/en/",
+      "description": "World clock app for iPhone with local time, sunrise and sunset, and Home Screen widgets.",
+      "operatingSystem": "iOS 17 or later",
+      "applicationCategory": "UtilitiesApplication",
+      "downloadUrl": "https://apps.apple.com/us/app/horizon-world-clock/id6823687302",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ICHITAP"
+      },
+      "inLanguage": [
+        "ja",
+        "en"
+      ],
+      "image": "https://support.ichitap.com/Horizon-World-Clock/overview/assets/share.jpg"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -119,8 +160,8 @@
       <div class="shell hero-inner">
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-line"></span>Sunrise, sunset & world time</p>
-          <h1 id="hero-title">World clock with<br><em>real-time sunrise &amp; sunset animation</em></h1>
-          <p class="hero-intro">Watch the sun move with each city’s sunrise and sunset. Add widgets to keep as many cities as you like in view.</p>
+          <h1 id="hero-title">World clock for iPhone<br><em>Sunrise and sunset in motion</em></h1>
+          <p class="hero-intro">Is it a good time to call someone overseas? Compare the current time in four cities and see whether it’s day or night. On iPhone, keep the cities you choose on your Home Screen.</p>
           <p class="hero-intro"><strong>Subscribe on iPhone and get the Mac app at no extra charge.</strong><br>Planned for the Mac launch with the same Apple Account.</p>
           <div class="actions">
             <a class="button button-primary" href="https://apps.apple.com/us/app/horizon-world-clock/id6823687302">Download on the App Store <span aria-hidden="true">↗</span></a>
@@ -128,7 +169,7 @@
           </div>
         </div>
         <div class="live-panel" aria-label="Current time in four cities">
-          <div class="live-heading"><span><i aria-hidden="true"></i>World time now</span><time id="live-utc">UTC</time></div>
+          <div class="live-heading"><span><i aria-hidden="true"></i>World clock online</span><time id="live-utc">UTC</time></div>
           <ul id="live-clocks" class="live-clocks"><li class="clock" data-city="la">
           <canvas width="216" height="216" aria-hidden="true"></canvas>
           <span class="clock-city">Los Angeles</span>
@@ -231,8 +272,8 @@
     <section class="daylight shell" id="daylight" aria-labelledby="daylight-title">
       <div class="section-intro">
         <p class="eyebrow"><span class="eyebrow-line"></span>Interactive demo</p>
-        <h2 id="daylight-title">One moment.<br>Four different skies.</h2>
-        <p>Move through the day to watch four cities change together. Pick another date to compare the hours of daylight across seasons.</p>
+        <h2 id="daylight-title">Compare sunrise and sunset</h2>
+        <p>Compare Tokyo, London, New York and Los Angeles at the same moment. Pick a date and move the slider to see local times, sunrise and sunset in all four cities.</p>
       </div>
       <div class="demo" id="demo">
         <div class="demo-head">
@@ -286,15 +327,26 @@
         </div>
         <div class="product-copy">
           <p class="eyebrow"><span class="eyebrow-line"></span>iPhone app & widgets</p>
-          <h2 id="widgets-title">Your cities.<br>One glance.</h2>
+          <h2 id="widgets-title">World clock widgets for iPhone</h2>
           <p>Keep family, teammates, and your next destination in view. Pick from 247 cities and regions, then add widgets to see the local time and daylight in more places at once.</p>
           <dl class="product-details">
             <div><dt><span aria-hidden="true">◫</span>A different set on each widget</dt><dd>Each widget shows four cities. Add separate groups for work, family, or travel.</dd></div>
             <div><dt><span aria-hidden="true">☀</span>Follow the changing seasons</dt><dd>Sunrise and sunset follow the city and date. Use the in-app motion preview to explore how the day changes with the seasons.</dd></div>
           </dl>
+          <p class="widget-guide-link"><a class="text-link" href="iphone-world-clock-widget/">How to set up the world clock widget</a></p>
           <p class="widget-refresh">iOS controls how often Home Screen widgets refresh.</p>
         </div>
       </div>
+    </section>
+
+    <section class="answers shell" id="questions" aria-labelledby="questions-title">
+      <h2 id="questions-title">Frequently asked questions</h2>
+      <dl>
+          <div><dt>Can I check time differences and daylight saving time?</dt><dd>In the <a href="#daylight">sunrise and sunset demo</a>, choose a date and UTC time to see the four local times together. Tokyo stays on UTC+9. London is on UTC+0 in standard time and UTC+1 during British Summer Time. UK and US clocks change on different dates, so use the date of your meeting or trip.</dd></div>
+          <div><dt>Can I show different cities on different iPhone widgets?</dt><dd>Yes. Choose four different cities per widget and add separate widgets for work, family or travel. See <a href="iphone-world-clock-widget/">how to add a widget and choose its cities</a>.</dd></div>
+          <div><dt>How are sunrise and sunset times calculated?</dt><dd>Horizon uses the city’s coordinates and local date. The sun on the dial shows how far the city is through daylight. Terrain and elevation can affect when you see the sun locally.</dd></div>
+          <div><dt>Can the clock show weather and temperature?</dt><dd>In the weather-enabled iPhone version, the clock face animates current conditions and shows the current temperature beneath the dial. Weather effects and temperature are separate settings, and you can choose Celsius or Fahrenheit. <a href="#weather">Preview all five weather patterns and the temperature display</a>.</dd></div>
+      </dl>
     </section>
 
     <section class="download shell" id="download" aria-labelledby="download-title">

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://support.ichitap.com/Horizon-World-Clock/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://support.ichitap.com/Horizon-World-Clock/overview/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/" />
+  </url>
+  <url>
+    <loc>https://support.ichitap.com/Horizon-World-Clock/overview/en/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/" />
+  </url>
+  <url>
+    <loc>https://support.ichitap.com/Horizon-World-Clock/overview/iphone-world-clock-widget/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/iphone-world-clock-widget/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/" />
+  </url>
+  <url>
+    <loc>https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://support.ichitap.com/Horizon-World-Clock/overview/iphone-world-clock-widget/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://support.ichitap.com/Horizon-World-Clock/overview/en/iphone-world-clock-widget/" />
+  </url>
+</urlset>

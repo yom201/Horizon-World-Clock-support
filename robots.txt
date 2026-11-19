@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# The following agents are used to control model training on Horizon pages.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Applebot-Extended
+Disallow: /Horizon-World-Clock/
+
+Sitemap: https://support.ichitap.com/Horizon-World-Clock/sitemap.xml
