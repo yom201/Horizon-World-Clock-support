@@ -24,7 +24,7 @@
     <header class="intro">
       <a class="brand" href="../overview/">ScheduleCam</a>
       <h1>Privacy Policy</h1>
-      <p class="updated"><time datetime="2026-11-19">November 19, 2026</time></p>
+      <p class="updated"><time datetime="2026-11-25">November 25, 2026</time></p>
       <p>ScheduleCam is an Android app by ICHITAP that schedules captures and can save them to the Google Drive account you connect. This policy explains how the app handles captures, information from Google, and remote capture requests.</p>
     </header>
     <section>
@@ -38,9 +38,10 @@
       <p>If you choose <strong>Drive only</strong>, ScheduleCam uploads new captures and verifies their file size and checksum in Drive before removing the copies from your Android device. The device keeps the files while uploads are pending.</p>
       <p>ScheduleCam uses information obtained from Google to authenticate you, save captures to your Drive, match remote capture requests, and send any Gmail notifications you enable. Our use and transfer of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
     </section>
-    <section>
+    <section id="gmail-notifications">
       <h2>Gmail notifications</h2>
-      <p>Gmail notifications are planned for a future Google Play release. In versions where you can enable this feature, ScheduleCam uses Gmail's send-only permission to email remote capture results from and to your connected Google Account. It attaches photos that fit and sends links to videos and larger photos after verifying their upload to Drive. The links keep the file's existing Drive access permissions.</p>
+      <p>When you enable Gmail notifications on the camera phone, ScheduleCam uses Gmail’s send-only permission (<code>gmail.send</code>) to email remote capture results from and to the same Google Account you connected to Drive. It attaches photos up to 17 MiB and emails links for videos and larger photos once their Drive uploads are verified. The links keep the file’s existing Drive access permissions.</p>
+      <p>Gmail notifications are disabled in the current Google Play version while Google reviews the requested Gmail permission.</p>
       <p>The Android device delivers these messages directly to Gmail. The device keeps pending delivery information and a temporary copy of an attached photo to complete the send. You can turn off Gmail notifications in the app and manage messages in Gmail.</p>
     </section>
     <section>
